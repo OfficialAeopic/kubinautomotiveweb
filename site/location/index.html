@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--
+  OPEN/CLOSED INDICATOR: The inline script at bottom of <body> calculates
+  whether the shop is currently open based on US Central Time and business
+  hours (Mon-Fri 7:30 AM - 5:30 PM). It updates .open-indicator colors and
+  .open-text content at page load. No external API needed.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags — update canonical before activating -->
+  <title>Location &amp; Hours | Kubin Automotive Service | 3515 S College Ave, Bryan, TX</title>
+  <meta name="description" content="Find Kubin Automotive Service at 3515 S College Ave, Bryan, TX 77801. Open Monday through Friday, 7:30 AM to 5:30 PM. Call (979) 779-7484 to schedule.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kubinautomotive.com/location/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kubinautomotive.com/location/">
+  <meta property="og:title" content="Location &amp; Hours | Kubin Automotive Service | Bryan, TX">
+  <meta property="og:description" content="3515 S College Ave, Bryan, TX 77801. Open Mon-Fri 7:30 AM to 5:30 PM. Call (979) 779-7484.">
+  <meta property="og:image" content="https://kubinautomotive.com/images/engine-block-workbench.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Location &amp; Hours | Kubin Automotive Service">
+  <meta name="twitter:description" content="3515 S College Ave, Bryan, TX 77801. Open Mon-Fri 7:30 AM to 5:30 PM.">
+  <meta name="twitter:image" content="https://kubinautomotive.com/images/engine-block-workbench.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- GA4 placeholder — swap before launch -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Meta Pixel placeholder — swap before launch -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '0000000000000000');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=0000000000000000&ev=PageView&noscript=1"/></noscript>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Kubin Automotive Service",
+    "url": "https://kubinautomotive.com",
+    "logo": "https://kubinautomotive.com/images/kubin-logo.png",
+    "image": "https://kubinautomotive.com/images/engine-block-workbench.png",
+    "description": "Family-owned auto repair shop in Bryan, TX serving the Brazos Valley since 1978. Three generations of honest, no-upsell automotive service.",
+    "telephone": "+1-979-779-7484",
+    "email": "Kubin.Automotive@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3515 S College Ave",
+      "addressLocality": "Bryan",
+      "addressRegion": "TX",
+      "postalCode": "77801",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.6354,
+      "longitude": -96.3405
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:30",
+        "closes": "17:30"
+      }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
+    "areaServed": ["Bryan, TX","College Station, TX","Brazos Valley, TX"],
+    "foundingDate": "1978",
+    "sameAs": [
+      "https://www.facebook.com/KubinAutomotiveService"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="header-logo" aria-label="Kubin Automotive Service home">
+          <img src="/images/kubin-logo.png" alt="Kubin Automotive Service logo" width="140" height="140">
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links" style="display:contents">
+            <li class="nav-dropdown">
+              <a href="/services/" class="nav-link nav-dropdown-toggle">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="/services/oil-change/">Oil Change &amp; Lube</a>
+                <a href="/services/brakes/">Brake Service</a>
+                <a href="/services/engine/">Engine Diagnostics</a>
+                <a href="/services/ac-heating/">A/C &amp; Heating</a>
+                <a href="/services/transmission/">Transmission</a>
+                <a href="/services/suspension/">Suspension &amp; Steering</a>
+                <a href="/services/electrical/">Electrical Systems</a>
+                <a href="/services/preventive/">Preventive Maintenance</a>
+                <div class="nav-dropdown-divider"></div>
+                <a href="/services/" class="nav-dropdown-all">View All Services</a>
+              </div>
+            </li>
+          </ul>
+          <a href="/about/" class="nav-link">About</a>
+          <a href="/reviews/" class="nav-link">Reviews</a>
+          <a href="/location/" class="nav-link">Location</a>
+          <a href="/get-started/" class="nav-link btn btn--gold nav-cta">Get Started</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE OVERLAY ==================== -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" aria-label="Mobile navigation">
+    <button class="mobile-overlay-close" id="mobileOverlayClose" aria-label="Close navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <nav class="mobile-overlay-nav" aria-label="Mobile main navigation">
+      <a href="/" class="mob-link">Home</a>
+      <div class="mob-dropdown">
+        <button class="mob-dropdown-toggle" aria-expanded="false">
+          Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mob-dropdown-menu">
+          <a href="/services/oil-change/" class="mob-sub-link">Oil Change &amp; Lube</a>
+          <a href="/services/brakes/" class="mob-sub-link">Brake Service</a>
+          <a href="/services/engine/" class="mob-sub-link">Engine Diagnostics</a>
+          <a href="/services/ac-heating/" class="mob-sub-link">A/C &amp; Heating</a>
+          <a href="/services/transmission/" class="mob-sub-link">Transmission</a>
+          <a href="/services/suspension/" class="mob-sub-link">Suspension &amp; Steering</a>
+          <a href="/services/electrical/" class="mob-sub-link">Electrical Systems</a>
+          <a href="/services/preventive/" class="mob-sub-link">Preventive Maintenance</a>
+          <a href="/services/" class="mob-sub-all">View All Services</a>
+        </div>
+      </div>
+      <a href="/about/" class="mob-link">About</a>
+      <a href="/reviews/" class="mob-link">Reviews</a>
+      <a href="/location/" class="mob-link">Location</a>
+      <a href="/get-started/" class="mob-link mob-link-cta">Get Started</a>
+    </nav>
+    <div class="mobile-overlay-footer">
+      <a href="tel:+19797797484">(979) 779-7484</a>
+      <span>Mon - Fri &bull; 7:30 AM - 5:30 PM</span>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero" aria-labelledby="location-page-heading">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Location</span>
+        </nav>
+        <span class="section-label">Find Us</span>
+        <h1 id="location-page-heading">Location &amp; Hours</h1>
+        <p>Same address on S College Ave since 1978. We are not hard to find, and we are never hard to reach.</p>
+        <div class="page-hero-rule" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ==================== LOCATION SPLIT ==================== -->
+    <section class="section section--flush" id="location" aria-label="Shop location and hours">
+      <div class="location-split">
+
+        <!-- Map pane -->
+        <div class="location-map-pane">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.2!2d-96.3405!3d30.6354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3515+S+College+Ave%2C+Bryan%2C+TX+77801!5e0!3m2!1sen!2sus!4v1700000000000"
+            title="Kubin Automotive Service map location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Info pane -->
+        <div class="location-info-pane">
+          <div class="location-info-inner">
+            <span class="section-label">Kubin Automotive Service</span>
+            <h2>3515 S College Ave<br>Bryan, TX 77801</h2>
+            <p class="location-sub">Located on South College Avenue, just south of the Texas A&amp;M campus corridor. Plenty of parking available in front of the shop.</p>
+
+            <!-- Live open/closed indicator — updated by inline script below -->
+            <div class="open-indicator" aria-live="polite">
+              <span class="open-pulse" aria-hidden="true"></span>
+              <span class="open-text">Checking hours...</span>
+              <span class="open-hours">Mon - Fri, 7:30 AM - 5:30 PM</span>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z"></path></svg>
+                Phone
+              </h3>
+              <a href="tel:+19797797484" class="phone-large">(979) 779-7484</a>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Hours
+              </h3>
+              <div class="hours-grid">
+                <span>Monday - Friday</span><span>7:30 AM - 5:30 PM</span>
+                <span>Saturday</span><span>Closed</span>
+                <span>Sunday</span><span>Closed</span>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Address
+              </h3>
+              <p>3515 S College Ave<br>Bryan, TX 77801</p>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=3515+S+College+Ave,+Bryan,+TX+77801"
+                target="_blank"
+                rel="noopener"
+                class="info-link"
+              >Get Directions &rarr;</a>
+            </div>
+
+            <a href="/contact/" class="btn btn--gold" style="margin-top: 0.5rem;">Schedule Your Service</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tire tread section divider -->
+    <div class="tread-divider" aria-hidden="true"></div>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section" aria-labelledby="location-cta-heading">
+      <div class="container">
+        <span class="section-label">Ready to Visit?</span>
+        <h2 id="location-cta-heading">Come See Us This Week</h2>
+        <p>
+          Walk-ins are welcome. If you prefer to plan ahead, schedule online or call us to confirm availability.
+        </p>
+        <div class="cta-actions">
+          <a href="/contact/" class="btn btn--gold">Request Appointment</a>
+          <a href="tel:+19797797484" class="cta-phone" aria-label="Call Kubin Automotive at (979) 779-7484">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z"></path></svg>
+            (979) 779-7484
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo" aria-label="Kubin Automotive Service home">
+            <img src="/images/kubin-logo.png" alt="Kubin Automotive Service" width="168" height="168">
+            <span class="logo-tagline">Since 1978</span>
+          </a>
+          <p>Family-owned since 1978. Three generations strong. Serving Bryan, College Station, and the Brazos Valley with honest, no-upsell auto repair.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/reviews/">Reviews</a></li>
+            <li><a href="/location/">Location</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/get-started/">Get Started</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span><a href="https://maps.google.com/?q=3515+S+College+Ave+Bryan+TX+77801" target="_blank" rel="noopener">3515 S College Ave<br>Bryan, TX 77801</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z"></path></svg>
+              <span><a href="tel:+19797797484">(979) 779-7484</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Mon-Fri: 7:30am - 5:30pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kubin Automotive Service. All rights reserved.</span>
+        <span>Designed by <a href="https://aeopic.com" target="_blank" rel="noopener">Aeopic</a> &bull; <span aria-label="Site version">v4.2.0</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+  <!-- Open/Closed indicator — calculates US Central Time at page load -->
+  <script>
+    (function () {
+      var now = new Date();
+      var year = now.getUTCFullYear();
+
+      function nthSundayOfMonth(y, month, n) {
+        var d = new Date(Date.UTC(y, month, 1));
+        var dayOfWeek = d.getUTCDay();
+        var firstSunday = (7 - dayOfWeek) % 7;
+        return new Date(Date.UTC(y, month, 1 + firstSunday + (n - 1) * 7));
+      }
+
+      var dstStart = nthSundayOfMonth(year, 2, 2);   // 2nd Sunday of March
+      var dstEnd   = nthSundayOfMonth(year, 10, 1);  // 1st Sunday of November
+      var isDST    = now >= dstStart && now < dstEnd;
+      var ctOffset = isDST ? -5 : -6;
+
+      var ctNow    = new Date(now.getTime() + ctOffset * 3600000);
+      var day      = ctNow.getUTCDay();
+      var hour     = ctNow.getUTCHours();
+      var min      = ctNow.getUTCMinutes();
+      var totalMin = hour * 60 + min;
+      var openMin  = 7 * 60 + 30;
+      var closeMin = 17 * 60 + 30;
+      var isOpen   = day >= 1 && day <= 5 && totalMin >= openMin && totalMin < closeMin;
+
+      var indicator = document.querySelector('.open-indicator');
+      var pulse     = indicator ? indicator.querySelector('.open-pulse') : null;
+      var textEl    = indicator ? indicator.querySelector('.open-text') : null;
+
+      if (indicator) {
+        if (isOpen) {
+          indicator.style.background  = 'rgba(34,197,94,0.12)';
+          indicator.style.borderColor = 'rgba(34,197,94,0.35)';
+          if (pulse) {
+            pulse.style.background  = '#22c55e';
+            pulse.style.boxShadow   = '0 0 0 0 rgba(34,197,94,0.4)';
+          }
+          if (textEl) {
+            textEl.textContent = 'Open Now';
+            textEl.style.color = '#22c55e';
+          }
+        } else {
+          indicator.style.background  = 'rgba(239,68,68,0.12)';
+          indicator.style.borderColor = 'rgba(239,68,68,0.35)';
+          if (pulse) {
+            pulse.style.background = '#ef4444';
+            pulse.style.boxShadow  = 'none';
+            pulse.style.animation  = 'none';
+          }
+          if (textEl) {
+            textEl.textContent = 'Closed';
+            textEl.style.color = '#ef4444';
+          }
+        }
+      }
+    })();
+  </script>
+
+  <!-- Aeopic Chatbot Widget -->
+  <script src="/js/chatbot-kb.js"></script>
+  <script src="/js/chatbot.js"></script>
+</body>
+</html>
