@@ -2083,6 +2083,58 @@ p:last-child {
   margin-bottom: 1.25rem;
 }
 
+/* Testimonials Grid (Reviews page v4.2.1) */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin: 0 0 1.25rem;
+  font-style: italic;
+}
+
+.testimonial-quote::before {
+  content: '"';
+}
+
+.testimonial-quote::after {
+  content: '"';
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.testimonial-source {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 /* ==============================
    Location page (pending)
 ============================== */
