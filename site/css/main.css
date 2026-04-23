@@ -1,6 +1,9 @@
-/* Kubin Automotive Service — main.css v4.0.0
+/* Kubin Automotive Service — main.css v4.2.1
    Brand: Navy #0D1B2A | Silver #B8C5D1 | Gold #C9A84C
    Fonts: Playfair Display (headings) | Inter (body)
+   v4.2.1: Added missing .section--flush modifier to zero padding on the
+           location page map/info split section. Fixes visible dead-space
+           gap above and below the map on /location/.
    v4.0.0: Design skill upgrade. Motion tokens (ease-out-quart, ease-out-expo),
            tinted whites (no pure #FFF), reduced motion support, focus-visible
            ring, tabular-nums on stats, increased dark-bg line-height,
@@ -160,6 +163,10 @@ p:last-child {
 
 .section {
   padding: var(--section-pad) 0;
+}
+
+.section--flush {
+  padding: 0;
 }
 
 .section--dark {
