@@ -1,3 +1,9 @@
+## v4.2.1 (2026-04-23) - Fix location page gap
+- Added missing `.section--flush` CSS modifier rule (padding: 0) to main.css
+- The `section--flush` class was referenced on the location page map/info split section but never defined, leaving the base `.section` rule to apply 60-100px of vertical padding
+- Visible fix: removes dead-space gap above and below the map on /location/, map now butts flush against the page hero and the tread divider as intended
+- Single-file change, no HTML changes needed
+
 ## v4.2.0 (2026-04-19) - Footer logo cleanup
 - Removed duplicate "Kubin Automotive" wordmark text from footer (logo image already contains it)
 - "Since 1978" established-date now sits directly under the logo image, left-aligned
