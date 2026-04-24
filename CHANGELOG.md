@@ -1,3 +1,9 @@
+## v4.3.1 (2026-04-23) - Kolton feedback implementation
+- Removed all tire service mentions per Kolton's confirmation that Kubin does not offer tire work. Affected services page (Tire Service list-item removed), get-started form (Tires checkbox removed), chatbot KB (tire-rotation, tire-balance, flat-tire entries removed plus 2 response reworded).
+- Added "Aggie Owned & Operated" branding to homepage three ways: hero badge, hero trust-item, new dedicated Aggie callout section with texas-am-offroad-truck.jpg photo.
+- Integrated Kolton's submitted photos into About and Reviews pages: kubin-auto-business-open.jpg in "Where It Started" story section, bcs-chamber-of-commerce.jpg in "Proud to Serve Aggieland" community section, happy-customer.jpg as Reviews page banner above testimonials grid.
+- main.css: v4.2.1 -> v4.3.1, added .aggie-callout, .aggie-community-photo, .reviews-photo-banner styles.
+
 ## v4.2.1 (2026-04-23) - Fix location page gap
 - Added missing `.section--flush` CSS modifier rule (padding: 0) to main.css
 - The `section--flush` class was referenced on the location page map/info split section but never defined, leaving the base `.section` rule to apply 60-100px of vertical padding
