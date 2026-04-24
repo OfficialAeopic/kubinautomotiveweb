@@ -733,7 +733,7 @@ window.CHATBOT_KB = {
         "request",
         "appointment"
       ],
-      "response": "All fields marked with an asterisk are required. We will confirm your appointment by phone or email. Leave this blank Full Name * Phone * Email Address * Vehicle Year / Make / Model * Service Needed * Select a service... Oil Change Brakes Tires Engine Diagnostics A/C Repair Transmission State Inspection Other (describe below) Preferred Date (optional) Additional Details (optional) Request Appointm... <a href=\"/contact/\">Learn more</a>",
+      "response": "All fields marked with an asterisk are required. We will confirm your appointment by phone or email. Leave this blank Full Name * Phone * Email Address * Vehicle Year / Make / Model * Service Needed * Select a service... Oil Change Brakes Engine Diagnostics A/C Repair Transmission State Inspection Other (describe below) Preferred Date (optional) Additional Details (optional) Request Appointm... <a href=\"/contact/\">Learn more</a>",
       "chips": []
     },
     {
@@ -901,7 +901,7 @@ window.CHATBOT_KB = {
         "direction",
         "routine"
       ],
-      "response": "Don't see what you need? Give us a call. If we can fix it, we will tell you. If we can not, we will point you in the right direction. Routine Maintenance Oil Changes Conventional, synthetic, and high-mileage oil with filter replacement Tire Service Rotation, balancing, flat repair, and new tire installation Tune-Ups Spark plugs, air filters, fuel filters, and ignition system checks Battery Service... <a href=\"/services/\">Learn more</a>",
+      "response": "Don't see what you need? Give us a call. If we can fix it, we will tell you. If we can not, we will point you in the right direction. Routine Maintenance Oil Changes Conventional, synthetic, and high-mileage oil with filter replacement Tune-Ups Spark plugs, air filters, fuel filters, and ignition system checks Battery Service... <a href=\"/services/\">Learn more</a>",
       "chips": []
     },
     {
@@ -1478,43 +1478,6 @@ window.CHATBOT_KB = {
       ]
     },
     {
-      "id": "tire-rotation",
-      "patterns": [
-        "tire rotation",
-        "rotate tires",
-        "rotate my tires",
-        "tire rotation cost",
-        "tire rotation price",
-        "rotate and balance",
-        "do you rotate tires"
-      ],
-      "response": "Yes, we rotate tires. Rotations every 5,000 to 7,500 miles keep wear even and make tires last longer. We include tire checks on every oil change visit.",
-      "chips": [
-        "Book service",
-        "Tire balance",
-        "Oil change"
-      ]
-    },
-    {
-      "id": "tire-balance",
-      "patterns": [
-        "tire balance",
-        "balance tires",
-        "wheel balance",
-        "tire balancing",
-        "shaking at highway speed",
-        "vibration at highway",
-        "steering wheel shakes",
-        "wheel wobble"
-      ],
-      "response": "Vibrations at highway speed are usually unbalanced wheels or a tire issue. We road force balance tires and check for cupping, tread separation, or bent wheels. Stop by and we will check yours.",
-      "chips": [
-        "Book service",
-        "Tire rotation",
-        "Wheel alignment"
-      ]
-    },
-    {
       "id": "wheel-alignment",
       "patterns": [
         "wheel alignment",
@@ -1532,28 +1495,7 @@ window.CHATBOT_KB = {
       "response": "Yes, we do alignments. Signs you need one: your car pulls, the steering wheel is crooked when you drive straight, or your tires wear unevenly. Call for current pricing.",
       "chips": [
         "Book alignment",
-        "Tire rotation",
         "Suspension"
-      ]
-    },
-    {
-      "id": "flat-tire",
-      "patterns": [
-        "flat tire",
-        "nail in tire",
-        "screw in tire",
-        "tire leaking air",
-        "tire losing air",
-        "tire patch",
-        "tire plug",
-        "tire repair",
-        "fix flat tire"
-      ],
-      "response": "We patch tires when the damage is in the repairable area (the tread center, not sidewall). If the tire is not safely repairable we will tell you. Bring it in and we will take a look.",
-      "chips": [
-        "Phone",
-        "Hours",
-        "Tire rotation"
       ]
     },
     {
@@ -1569,10 +1511,9 @@ window.CHATBOT_KB = {
         "check tire pressure",
         "low air warning"
       ],
-      "response": "We check tire pressure on every service visit and can reset your TPMS system. If a sensor is dead we can replace it. Most sensor failures happen around 7-10 years when the internal battery dies.",
+      "response": "We check tire pressure on every service visit and can reset your TPMS system. If your TPMS light stays on, that is usually a sensor battery failing, which typically happens around 7 to 10 years.",
       "chips": [
         "Book service",
-        "Tire rotation",
         "Location"
       ]
     },
@@ -2054,7 +1995,7 @@ window.CHATBOT_KB = {
         "lounge",
         "place to wait"
       ],
-      "response": "Yes, we have a clean waiting area with comfortable seating, coffee, and free WiFi. Most quick services like oil changes and tire rotations you can wait on. Bigger repairs we will give you an honest time estimate.",
+      "response": "Yes, we have a clean waiting area with comfortable seating, coffee, and free WiFi. Most quick services like oil changes you can wait on. Bigger repairs we will give you an honest time estimate.",
       "chips": [
         "Hours",
         "Location",

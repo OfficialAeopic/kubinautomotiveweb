@@ -1,6 +1,12 @@
-/* Kubin Automotive Service — main.css v4.2.1
+/* Kubin Automotive Service — main.css v4.3.1
    Brand: Navy #0D1B2A | Silver #B8C5D1 | Gold #C9A84C
    Fonts: Playfair Display (headings) | Inter (body)
+   v4.3.1: Photo figures for Kolton's submitted photos. .aggie-community-photo
+           (About page community section) and .reviews-photo-banner (Reviews
+           page testimonial banner).
+   v4.3.0: Aggie Owned & Operated callout section. New .aggie-callout,
+           .aggie-callout-grid, .aggie-callout-media, .aggie-callout-text
+           styles. Paired with hero text updates in index.html.
    v4.2.1: Added missing .section--flush modifier to zero padding on the
            location page map/info split section. Fixes visible dead-space
            gap above and below the map on /location/.
@@ -1893,6 +1899,118 @@ p:last-child {
 
 .footer-bottom a:hover {
   color: var(--silver);
+}
+
+
+
+/* ==============================
+   Aggie Owned Callout Section
+============================== */
+.aggie-callout {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--navy);
+  color: var(--silver-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.aggie-callout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.aggie-callout .container {
+  position: relative;
+  z-index: 1;
+}
+
+.aggie-callout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .aggie-callout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aggie-callout-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.aggie-callout-text .section-label {
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.aggie-callout-text h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.aggie-callout-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--silver-light);
+}
+
+
+
+/* ==============================
+   Photo Figures (Kolton contributions)
+============================== */
+.aggie-community-photo {
+  margin: 2rem auto 0;
+  max-width: 900px;
+}
+
+.aggie-community-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+.aggie-community-photo figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--silver);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.reviews-photo-banner {
+  margin: 0 auto 3rem;
+  max-width: 1100px;
+}
+
+.reviews-photo-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(13, 27, 42, 0.18);
+  display: block;
+}
+
+.reviews-photo-banner figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-style: italic;
 }
 
 /* ==============================
