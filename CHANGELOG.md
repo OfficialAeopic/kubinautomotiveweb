@@ -1,3 +1,8 @@
+## v4.3.3 (2026-04-25) - Location banner spacing fix
+- Increased bottom padding on .location-sign-banner from clamp(40-72px) to clamp(72-110px) so the caption has visible breathing room before the map split below.
+- Caption margin-top bumped 1rem to 1.25rem for slightly more space above the caption text.
+- Single CSS file change. Pure additive spacing tweak, no structural change.
+
 ## v4.3.2 (2026-04-24) - Remaining Kolton photos placed
 - About page "The Family Behind the Shop" section: replaced the two stock `about-team-*.jpg` placeholders with real heritage photos. Slot 1 now shows `frank-kubin-tire-balance.jpg` captioned as second-generation Kubin work (no current-service claim). Slot 2 now shows `classic-truck.jpg` representing decades of customer vehicles. Section subtitle reworded to match the heritage framing.
 - Location page: added `kubin-auto-sign.jpg` as a banner between the page hero and the map/info split, captioned "Same sign, same address, same family. South College Avenue since 1978."
