@@ -1,3 +1,9 @@
+## v4.3.2 (2026-04-24) - Remaining Kolton photos placed
+- About page "The Family Behind the Shop" section: replaced the two stock `about-team-*.jpg` placeholders with real heritage photos. Slot 1 now shows `frank-kubin-tire-balance.jpg` captioned as second-generation Kubin work (no current-service claim). Slot 2 now shows `classic-truck.jpg` representing decades of customer vehicles. Section subtitle reworded to match the heritage framing.
+- Location page: added `kubin-auto-sign.jpg` as a banner between the page hero and the map/info split, captioned "Same sign, same address, same family. South College Avenue since 1978."
+- main.css v4.3.1 -> v4.3.2, new `.location-sign-banner` styles.
+- Completes placement of all seven of Kolton's submitted photos per Sam's 2026-04-24 green-light.
+
 ## v4.3.1 (2026-04-23) - Kolton feedback implementation
 - Removed all tire service mentions per Kolton's confirmation that Kubin does not offer tire work. Affected services page (Tire Service list-item removed), get-started form (Tires checkbox removed), chatbot KB (tire-rotation, tire-balance, flat-tire entries removed plus 2 response reworded).
 - Added "Aggie Owned & Operated" branding to homepage three ways: hero badge, hero trust-item, new dedicated Aggie callout section with texas-am-offroad-truck.jpg photo.

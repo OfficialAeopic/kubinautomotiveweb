@@ -1,6 +1,9 @@
-/* Kubin Automotive Service — main.css v4.3.1
+/* Kubin Automotive Service — main.css v4.3.2
    Brand: Navy #0D1B2A | Silver #B8C5D1 | Gold #C9A84C
    Fonts: Playfair Display (headings) | Inter (body)
+   v4.3.2: Location sign banner. New .location-sign-banner for the
+           Kubin Automotive sign photo above the map split on the
+           Location page.
    v4.3.1: Photo figures for Kolton's submitted photos. .aggie-community-photo
            (About page community section) and .reviews-photo-banner (Reviews
            page testimonial banner).
@@ -2006,6 +2009,41 @@ p:last-child {
 }
 
 .reviews-photo-banner figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+
+
+/* ==============================
+   Location Sign Banner
+============================== */
+.location-sign-banner {
+  margin: 0;
+  padding: 0 clamp(20px, 5vw, 48px);
+  background: var(--off-white);
+  padding-top: clamp(40px, 5vw, 72px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.location-sign-banner .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.location-sign-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(13, 27, 42, 0.18);
+  display: block;
+}
+
+.location-sign-banner figcaption {
   margin-top: 1rem;
   text-align: center;
   color: var(--text-muted);
