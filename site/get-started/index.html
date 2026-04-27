@@ -135,6 +135,7 @@
           <a href="/about/" class="nav-link">About</a>
           <a href="/reviews/" class="nav-link">Reviews</a>
           <a href="/location/" class="nav-link">Location</a>
+          <a href="/contact/" class="nav-link">Contact</a>
           <a href="/get-started/" class="nav-link btn btn--gold nav-cta" aria-current="page">Get Started</a>
         </nav>
       </div>
@@ -168,6 +169,7 @@
       <a href="/about/" class="mob-link">About</a>
       <a href="/reviews/" class="mob-link">Reviews</a>
       <a href="/location/" class="mob-link">Location</a>
+      <a href="/contact/" class="mob-link">Contact</a>
       <a href="/get-started/" class="mob-link mob-link-cta" aria-current="page">Get Started</a>
     </nav>
     <div class="mobile-overlay-footer">
@@ -323,7 +325,7 @@
                           type="tel"
                           id="phone"
                           name="phone"
-                          placeholder="(979) 555-0100"
+                          placeholder="(XXX) XXX-XXXX"
                           required
                           autocomplete="tel"
                           aria-required="true"
@@ -356,15 +358,20 @@
                         <label for="vehicle-year">Year <span class="req" aria-label="required">*</span></label>
                         <select id="vehicle-year" name="vehicle_year" required aria-required="true">
                           <option value="" disabled selected>Year</option>
-                          <script>
-                            (function(){
-                              var cur = new Date().getFullYear();
-                              for(var y = cur + 1; y >= 1960; y--){
-                                document.write('<option value="' + y + '">' + y + '</option>');
-                              }
-                            })();
-                          </script>
                         </select>
+                        <script>
+                          (function(){
+                            var sel = document.getElementById('vehicle-year');
+                            if (!sel) return;
+                            var cur = new Date().getFullYear();
+                            for (var y = cur + 1; y >= 1960; y--) {
+                              var opt = document.createElement('option');
+                              opt.value = y;
+                              opt.textContent = y;
+                              sel.appendChild(opt);
+                            }
+                          })();
+                        </script>
                       </div>
                       <div class="form-group">
                         <label for="vehicle-make">Make <span class="req" aria-label="required">*</span></label>
