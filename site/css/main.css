@@ -3229,13 +3229,16 @@ p:last-child {
 }
 
 /* ==============================
-   Hero Trust Row (v4.1)
+   Hero Trust Row (v4.2)
+   All four items on a single line.
+   Above 600px: nowrap, clamp-scaled font and padding so 4 items + 3 separators fit any desktop/tablet viewport.
+   Mobile (<= 600px): allow wrap.
 ============================== */
 .hero-trust-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   column-gap: 0;
   row-gap: clamp(6px, 0.6em, 10px);
   border-top: 1px solid rgba(184, 197, 209, 0.18);
@@ -3243,20 +3246,22 @@ p:last-child {
   padding-bottom: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .hero-trust-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 clamp(8px, 1.4vw, 16px);
+  gap: clamp(4px, 0.6vw, 8px);
+  padding: 0 clamp(6px, 1vw, 14px);
   border-right: 1px solid rgba(184, 197, 209, 0.18);
-  font-size: 0.72rem;
+  font-size: clamp(0.6rem, 0.86vw, 0.78rem);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--silver);
   white-space: nowrap;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .hero-trust-item:last-child {
@@ -3266,6 +3271,8 @@ p:last-child {
 .hero-trust-item svg {
   flex-shrink: 0;
   color: var(--gold);
+  width: clamp(12px, 1vw, 16px);
+  height: clamp(12px, 1vw, 16px);
 }
 
 .hero-trust-item--aggie {
@@ -3278,6 +3285,7 @@ p:last-child {
 
 @media (max-width: 600px) {
   .hero-trust-row {
+    flex-wrap: wrap;
     column-gap: 8px;
     row-gap: 8px;
   }
@@ -3286,6 +3294,7 @@ p:last-child {
     border-right: none;
     font-size: 0.72rem;
     padding: 4px 12px;
+    flex-shrink: 1;
   }
 }
 
