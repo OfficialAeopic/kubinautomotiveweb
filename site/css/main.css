@@ -3908,3 +3908,15 @@ p:last-child {
 }
 
 /* version bump: main.css v4.1.0 */
+
+
+/* Force trust-row to wrap as 2+2 so the pink Aggie Owned line stays paired with Honest Repairs */
+@media (min-width: 601px) {
+  .hero-trust-row .hero-trust-sep:nth-of-type(2) {
+    flex-basis: 100%;
+    height: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
