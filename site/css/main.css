@@ -3237,7 +3237,7 @@ p:last-child {
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 0;
-  row-gap: clamp(14px, 1.6em, 22px);
+  row-gap: clamp(6px, 0.6em, 10px);
   border-top: 1px solid rgba(184, 197, 209, 0.18);
   padding-top: 2.25rem;
   padding-bottom: 1.25rem;
@@ -3279,7 +3279,7 @@ p:last-child {
 @media (max-width: 600px) {
   .hero-trust-row {
     column-gap: 8px;
-    row-gap: 16px;
+    row-gap: 8px;
   }
 
   .hero-trust-item {
