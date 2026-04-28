@@ -1,4 +1,7 @@
-/* Kubin Automotive Service — main.js v3.0.0
+/* Kubin Automotive Service - main.js v3.1.0
+   v3.1.0: Contact form mailto: bridge fallback. When /api/contact fails
+           (Resend not yet configured), open user's mail client with prefilled
+           payload to Kubin.Automotive@yahoo.com. UI shows success either way.
    v3.0.0: Replaced mobile slide-out with full-screen mobile overlay menu.
            Added services accordion for mobile overlay. Active link detection
            updated for directory-based clean URLs.
@@ -282,6 +285,28 @@
       submitBtn.classList.add('loading');
       submitBtn.textContent = 'Sending...';
 
+      // Bridge fallback: when /api/contact fails (Resend domain not yet
+      // verified, env var missing, or network down), build a mailto: link
+      // with the prefilled payload so the lead is not lost. The user's
+      // mail client opens with a draft to Kubin.Automotive@yahoo.com.
+      // Once RESEND_API_KEY + domain verification are live in Vercel,
+      // this fallback becomes dead code that never triggers.
+      function openMailtoFallback() {
+        var subject = encodeURIComponent('Appointment Request from ' + payload.name);
+        var lines = [
+          'Name: ' + payload.name,
+          'Email: ' + payload.email,
+          'Phone: ' + payload.phone,
+          'Vehicle: ' + payload.vehicle,
+          'Service: ' + payload.service,
+          'Preferred date: ' + payload.date,
+          'Message: ' + payload.message
+        ];
+        var body = encodeURIComponent(lines.join('
+'));
+        window.location.href = 'mailto:Kubin.Automotive@yahoo.com?subject=' + subject + '&body=' + body;
+      }
+
       try {
         const res = await fetch('/api/contact', {
           method: 'POST',
@@ -295,11 +320,16 @@
           contactForm.reset();
           showStatus('success', 'Thanks, we will reach out within 1 business day.');
         } else {
-          const msg = (data && data.error) ? data.error : 'Something went wrong. Please call us directly at (979) 779-7484.';
-          showStatus('error', msg);
+          openMailtoFallback();
+          contactForm.reset();
+          showStatus('success', 'Thanks, your email client just opened with the request. Send it to confirm, or call (979) 779-7484.');
+          console.warn('contact API returned non-success, used mailto fallback', data);
         }
       } catch (err) {
-        showStatus('error', 'Connection error. Please call us directly at (979) 779-7484.');
+        openMailtoFallback();
+        contactForm.reset();
+        showStatus('success', 'Thanks, your email client just opened with the request. Send it to confirm, or call (979) 779-7484.');
+        console.warn('contact API errored, used mailto fallback', err);
       } finally {
         submitBtn.classList.remove('loading');
         submitBtn.textContent = 'Request Appointment';
