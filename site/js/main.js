@@ -302,8 +302,7 @@
           'Preferred date: ' + payload.date,
           'Message: ' + payload.message
         ];
-        var body = encodeURIComponent(lines.join('
-'));
+        var body = encodeURIComponent(lines.join('\n'));
         window.location.href = 'mailto:Kubin.Automotive@yahoo.com?subject=' + subject + '&body=' + body;
       }
 
