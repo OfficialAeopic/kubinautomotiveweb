@@ -176,6 +176,7 @@ p:last-child {
 
 .section {
   padding: var(--section-pad) 0;
+  background: var(--off-white);
 }
 
 .section--flush {
