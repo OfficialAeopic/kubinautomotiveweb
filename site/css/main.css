@@ -1913,20 +1913,43 @@ p:last-child {
 /* ==============================
    Aggie Owned Callout Section
 ============================== */
+/* v4.4.0: Aggie Owned section enlarged per client request 2026-04-29.
+   Hero-scale padding, oversized headline (3.5rem -> clamp), gold accent
+   border on top and bottom, larger image with maroon glow, larger body
+   copy and CTA. Section now reads as a primary feature, not a sidebar. */
 .aggie-callout {
-  padding: clamp(60px, 8vw, 100px) 0;
+  padding: clamp(96px, 12vw, 180px) 0;
   background: var(--navy);
   color: var(--silver-light);
   position: relative;
   overflow: hidden;
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
 }
 
 .aggie-callout::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(80, 0, 0, 0.18) 0%, transparent 55%);
   pointer-events: none;
+}
+
+.aggie-callout::after {
+  content: 'AGGIELAND';
+  position: absolute;
+  bottom: -28px;
+  right: -12px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(120px, 18vw, 280px);
+  color: rgba(201, 168, 76, 0.05);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
 }
 
 .aggie-callout .container {
@@ -1936,8 +1959,8 @@ p:last-child {
 
 .aggie-callout-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 4vw, 64px);
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 5vw, 80px);
   align-items: center;
 }
 
@@ -1950,26 +1973,49 @@ p:last-child {
 .aggie-callout-media img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+  border-radius: 14px;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(201, 168, 76, 0.25),
+    0 0 80px rgba(80, 0, 0, 0.35);
   display: block;
 }
 
 .aggie-callout-text .section-label {
   color: var(--gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
 }
 
 .aggie-callout-text h2 {
   color: var(--white);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.aggie-callout-text h2::after {
+  content: '';
+  display: block;
+  width: 88px;
+  height: 4px;
+  background: var(--gold);
+  margin-top: 1.25rem;
+  border-radius: 2px;
 }
 
 .aggie-callout-text p {
-  margin-bottom: 1.5rem;
-  font-size: 1.02rem;
-  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.75;
   color: var(--silver-light);
+}
+
+.aggie-callout-text .btn {
+  font-size: 1rem;
+  padding: 14px 28px;
 }
 
 
