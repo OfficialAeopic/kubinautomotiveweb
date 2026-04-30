@@ -1398,7 +1398,7 @@ p:last-child {
 .timeline {
   position: relative;
   padding-left: 2rem;
-  margin: 2rem 0;
+  margin: 0.5rem 0 0;
 }
 
 .timeline::before {
