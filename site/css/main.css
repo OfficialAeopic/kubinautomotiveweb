@@ -363,22 +363,23 @@ p:last-child {
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 288px;
+  width: 360px;
   max-width: calc(100vw - 32px);
   transform: translateX(-50%);
   background: #5a0f1b;
   color: var(--white);
-  border: 1px solid rgba(201, 168, 76, 0.45);
+  border: 1px solid rgba(201, 168, 76, 0.58);
   border-top: none;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-  padding: 8px 12px 9px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+  padding: 12px 22px 13px;
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 1.2;
   text-transform: uppercase;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 18px 100%);
 }
 
 .header-inner {
