@@ -179,7 +179,7 @@ window.CHATBOT_KB = {
         "senior",
         "senior discount"
       ],
-      "response": "Yes, Kubin honors discounts for Aggies, students, military, veterans, first responders, and seniors. Let us know when you book and we will apply the discount to your invoice. Call <a href=\"tel:9797797484\">(979) 779-7484</a> or stop by.",
+      "response": "Yes, Kubin honors discounts for students, military, veterans, first responders, and seniors. Let us know when you book and we will apply the discount to your invoice. Call <a href=\"tel:9797797484\">(979) 779-7484</a> or stop by.",
       "chips": [
         "Location",
         "Hours",
@@ -245,7 +245,7 @@ window.CHATBOT_KB = {
         "how far texas a and m",
         "texas a and m"
       ],
-      "response": "We are about 10 minutes from the Texas A&M campus at 3515 S College Ave in Bryan. Easy drop-off before class or work. <a href=\"https://www.google.com/maps/place/Kubin+Automotive/\">Get directions</a>.",
+      "response": "We are about 10 minutes from the local university campus at 3515 S College Ave in Bryan. Easy drop-off before class or work. <a href=\"https://www.google.com/maps/place/Kubin+Automotive/\">Get directions</a>.",
       "chips": [
         "Location",
         "Hours",
@@ -771,7 +771,7 @@ window.CHATBOT_KB = {
         "parking",
         "available"
       ],
-      "response": "Located on South College Avenue, just south of the Texas A&M campus corridor. Plenty of parking available in front of the shop. Checking hours... Mon - Fri, 7:30 AM - 5:30 PM <a href=\"/location/\">Learn more</a>",
+      "response": "Located on South College Avenue, just south of the university campus corridor. Plenty of parking available in front of the shop. Checking hours... Mon - Fri, 7:30 AM - 5:30 PM <a href=\"/location/\">Learn more</a>",
       "chips": []
     },
     {
@@ -2457,9 +2457,9 @@ window.CHATBOT_KB = {
         "retiree discount",
         "age discount"
       ],
-      "response": "We treat our older customers right. Mention you are a senior when you drop off and we will take care of you, just like we do our Aggie and community customers.",
+      "response": "We treat our older customers right. Mention you are a senior when you drop off and we will take care of you, just like we do every customer in our community.",
       "chips": [
-        "Aggie discount",
+        "student discount",
         "Estimate",
         "Phone"
       ]
@@ -2477,7 +2477,7 @@ window.CHATBOT_KB = {
       ],
       "response": "Yes, we honor military and first responder discounts. Thanks for your service. Mention it when you drop off and we will make sure you are taken care of.",
       "chips": [
-        "Aggie discount",
+        "student discount",
         "Estimate",
         "Phone"
       ]
