@@ -350,6 +350,31 @@ p:last-child {
   overflow: visible;
 }
 
+.site-header::after {
+  content: "Alumni Owned & Operated";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  transform: translateX(-50%);
+  background: #5a0f1b;
+  color: var(--white);
+  border: 1px solid rgba(201, 168, 76, 0.58);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+  padding: 12px 22px 13px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 18px 100%);
+  z-index: 5;
+}
+
 .site-header.hidden {
   transform: translateY(-100%);
 }
@@ -385,7 +410,8 @@ p:last-child {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  position: relative;
   height: 80px;
   padding: 0;
   overflow: visible;
@@ -429,9 +455,13 @@ p:last-child {
 }
 
 .site-nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -881,6 +911,7 @@ p:last-child {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 56px;
 }
 
 .hero-bg {
@@ -901,6 +932,14 @@ p:last-child {
 .hero-bg img {
   animation: kenBurns 18s ease-in-out infinite alternate;
   will-change: transform;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 @keyframes kenBurns {
@@ -2066,7 +2105,7 @@ p:last-child {
 }
 
 .aggie-callout::after {
-  content: 'AGGIELAND';
+  content: 'BRYAN';
   position: absolute;
   bottom: -28px;
   right: -12px;

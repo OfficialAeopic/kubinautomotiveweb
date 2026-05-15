@@ -5,6 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] - 2026-05-15
+- Trademark protection sweep per SO38. Removed all "Aggie" and "Aggieland" references from visible body copy across home, about, and get-started pages. Replaced with geographic descriptors (Bryan, Brazos Valley, BCS). CSS watermark "AGGIELAND" replaced with "BRYAN". Removed unverified claim that Kolton Kubin is a Texas A&M student/alumnus from his bio (his wife may be the actual alumnus; pending client verification). CSS class names with `aggie-` prefix retained as internal markup IDs (not user-visible).
+- Stripped 4 remaining Texas A&M references (JSON-LD description, hero photo alt-text, customer-base body copy, location landmark). University-generic replacements used.
+
+## [Unreleased] - 2026-05-14
+- New hero video for safe-review evaluation: 4K Higgsfield video (Kling 3.0, 15s loop, mechanic under hood in maroon jumpsuit) replaces the static lift photo. Poster fallback uses the new 2560px JPG still. Old hero file `hero-car-on-lift.jpg` retained on disk for instant rollback.
+
 ## v4.2.0 - 2026-04-18
 
 ### Added
