@@ -384,7 +384,7 @@ p:last-child {
 }
 
 .site-header::after {
-  content: "Texas A&M Alumni Owned & Operated";
+  content: "Alumni Owned & Operated";
   position: absolute;
   left: 50%;
   top: 100%;
