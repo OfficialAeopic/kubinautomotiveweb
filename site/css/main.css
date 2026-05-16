@@ -860,6 +860,7 @@ p:last-child {
     font-size: 1rem;
     border-radius: 0;
     background: transparent !important;
+    white-space: nowrap;
   }
 
   .nav-link:hover,
@@ -940,6 +941,22 @@ p:last-child {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+.hero-bg-mobile-still {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-bg-video {
+    display: none;
+  }
+
+  .hero-bg-mobile-still {
+    display: block;
+    animation: none;
+    object-position: center top;
+  }
 }
 
 @keyframes kenBurns {
@@ -1284,10 +1301,35 @@ p:last-child {
     padding: 32px 24px;
   }
 
+  .tab-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-nav::-webkit-scrollbar {
+    display: none;
+  }
+
   .tab-btn {
-    font-size: 0.75rem;
-    padding: 8px 10px;
-    gap: 4px;
+    font-size: 0.82rem;
+    padding: 10px 14px;
+    gap: 0;
+    flex: 0 0 auto;
+    min-width: 92px;
+    scroll-snap-align: start;
+  }
+
+  .tab-btn[data-tab="transmission"],
+  .tab-btn[data-tab="suspension"],
+  .tab-btn[data-tab="electrical"],
+  .tab-btn[data-tab="preventive"] {
+    min-width: 124px;
   }
 
   .tab-btn svg {
