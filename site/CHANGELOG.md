@@ -5,6 +5,43 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.4.1 - 2026-07-13
+
+### Changed
+
+- Replicated the "Careers" nav link (primary desktop nav, mobile overlay, footer) onto the five remaining pages that were missed in the v4.4.0 pass: `about/`, `services/`, `reviews/`, `location/`, `get-started/`. Placed after Contact, before the Get Started CTA, matching index.html markup exactly. Careers link now present on all 8 pages.
+
+---
+
+## v4.4.0 - 2026-07-06
+
+### Added
+
+**careers/index.html** (NEW page at `/careers/`):
+- "Now Hiring: General Automotive Technician" hiring page. Editorial job description (Responsibilities, What We Look For, What Kubin Offers) using list/definition layout, no card grids per SO46. Tire work intentionally excluded from role duties per Kubin verified business facts.
+- Application form `#careers-form`: name, phone, email (all required), years of experience (select), ASE certified (radio yes/no), optional "why Kubin" message, and a required resume file upload (`.pdf,.doc,.docx`). Honeypot `website` field included.
+- Client-side JS reads the resume via `FileReader.readAsDataURL`, strips the data-URI prefix, validates extension (pdf/doc/docx) and 4 MB max, then POSTs JSON to `/api/careers`. Oversized/invalid files are rejected inline with a mailto fallback to Kubin.Automotive@yahoo.com. Success/error states mirror the Get Started form UX.
+- JobPosting JSON-LD schema, full SEO/OG/Twitter meta, GA4 + Meta Pixel placeholders (unchanged `G-XXXXXXXXXX` / `0000000000000000`), native nav header, mobile overlay, and footer.
+
+**api/careers.js** (NEW serverless function):
+- Mirrors `api/contact.js` conventions: `import { Resend }`, reads `process.env.RESEND_API_KEY` (same env var, no new credential), `from: 'Kubin Automotive Website <noreply@kubinautomotive.com>'`, `to: 'Kubin.Automotive@yahoo.com'`, `reply_to` = applicant email, shared `escapeHtml()` XSS guard, dark-navy/gold HTML email table layout.
+- Honeypot check, required-field validation (name/phone/email/resume), email regex, resume extension + non-empty base64 + decoded-size (<=4 MB) validation with 400 responses.
+- Attaches the resume via Resend `attachments: [{ filename, content: <base64> }]`. Filename is sanitized. Subject: `New Job Application (General Technician) — <name>`.
+
+### Changed
+
+- Added a "Careers" link to the primary nav, mobile overlay, and footer on `index.html`, `contact/index.html`, and the new `careers/index.html` (placed after Contact, before the Get Started CTA). Other pages not edited this pass.
+- `css/main.css` bumped to v4.4.0: new `.careers-badge` (+pulse), `.careers-jd-lead`, `.careers-jd-cols`, `.careers-list` (gold check bullets), `.careers-offer`, and the `.file-field` resume-upload control styled for the dark form card. Additive only.
+- `sitemap.xml`: added `/careers/` (priority 0.6, lastmod 2026-07-06).
+
+### Notes
+
+- CSP unchanged: `connect-src 'self'` already permits the same-origin `/api/careers` fetch; the file input needs no CSP allowance. `api.resend.com` remains allowed for the serverless send.
+- Deploy note: resume attachments count against the Vercel serverless request body limit (~4.5 MB) and Resend's per-message attachment size. The 4 MB client + server guard keeps requests under that ceiling; larger files are told to email directly.
+- Footer version strings bumped to v4.4.0 only on the three edited pages. Other pages remain on v4.3.3 until the next site-wide version sync.
+
+---
+
 ## [Unreleased] - 2026-05-15
 - Trademark protection sweep per SO38. Removed all "Aggie" and "Aggieland" references from visible body copy across home, about, and get-started pages. Replaced with geographic descriptors (Bryan, Brazos Valley, BCS). CSS watermark "AGGIELAND" replaced with "BRYAN". Removed unverified claim that Kolton Kubin is a Texas A&M student/alumnus from his bio (his wife may be the actual alumnus; pending client verification). CSS class names with `aggie-` prefix retained as internal markup IDs (not user-visible).
 - Stripped 4 remaining Texas A&M references (JSON-LD description, hero photo alt-text, customer-base body copy, location landmark). University-generic replacements used.
