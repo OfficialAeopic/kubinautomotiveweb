@@ -5,6 +5,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.4.2 - 2026-07-14
+- Replaced all "Alumni Owned & Operated" phrasing with "Aggie Owned & Operated" (4 instances on index.html: hero badge, trust line, callout section aria-label + heading). Per TAMU Licensing email 2026-06-08 (via Justin): approved phrase is "Aggie Owned and Operated", university does not say "Alumni", and does not object to website use. Approval screenshot archived at assets/compliance/tamu-licensing-aggie-owned-approval-2026-06-08.png.
+
 ## v4.4.1 - 2026-07-13
 
 ### Changed

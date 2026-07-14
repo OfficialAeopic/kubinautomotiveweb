@@ -1,6 +1,9 @@
-/* Kubin Automotive Service — main.css v4.3.3
+/* Kubin Automotive Service — main.css v4.4.0
    Brand: Navy #0D1B2A | Silver #B8C5D1 | Gold #C9A84C
    Fonts: Playfair Display (headings) | Inter (body)
+   v4.4.0: Careers / Hiring page. New .careers-badge, .careers-jd-lead,
+           .careers-jd-cols, .careers-list, .careers-offer, and the
+           .file-field resume-upload control (dark form card). No card grids.
    v4.3.3: Location sign banner spacing. Increased bottom padding
            on .location-sign-banner from clamp(40-72px) to clamp(72-110px)
            so the caption has visible breathing room before the map split.
@@ -348,31 +351,6 @@ p:last-child {
   border-bottom: 1px solid rgba(201, 168, 76, 0.2);
   transition: transform 0.35s var(--ease-out-quart), box-shadow 0.35s var(--ease-out-quart);
   overflow: visible;
-}
-
-.site-header::after {
-  content: "Alumni Owned & Operated";
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  width: 320px;
-  max-width: calc(100vw - 32px);
-  transform: translateX(-50%);
-  background: #5a0f1b;
-  color: var(--white);
-  border: 1px solid rgba(201, 168, 76, 0.58);
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
-  padding: 12px 22px 13px;
-  text-align: center;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 18px 100%);
-  z-index: 5;
 }
 
 .site-header.hidden {
@@ -4173,3 +4151,179 @@ p:last-child {
 }
 
 /* version bump: main.css v4.1.0 */
+
+/* ==============================
+   Careers / Hiring page (v4.4.0)
+   Editorial job description + application form.
+   Reuses page-hero, section, gs-form-* and form-* classes.
+============================== */
+
+/* Hiring badge in the page hero */
+.careers-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 14px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  border-radius: 999px;
+  background: rgba(201, 168, 76, 0.08);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.careers-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.6);
+  animation: careersPulse 2.4s ease-out infinite;
+}
+
+@keyframes careersPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.55); }
+  70%  { box-shadow: 0 0 0 9px rgba(201, 168, 76, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+}
+
+/* Job description block (editorial, no cards) */
+.careers-jd-lead {
+  max-width: 760px;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--text-body, #35485a);
+  margin-bottom: 2.5rem;
+}
+
+.careers-jd-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.careers-jd-col h3 {
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  margin-bottom: 1.1rem;
+}
+
+.careers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.careers-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-body, #35485a);
+}
+
+.careers-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23C9A84C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* "What Kubin offers" band sits inside a light section */
+.careers-offer {
+  margin-top: clamp(2.5rem, 5vw, 3.75rem);
+  padding-top: clamp(2rem, 4vw, 2.75rem);
+  border-top: 1px solid rgba(122, 143, 160, 0.28);
+}
+
+.careers-offer h3 {
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  margin-bottom: 1.1rem;
+}
+
+.careers-offer .careers-list {
+  columns: 2;
+  column-gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.careers-offer .careers-list li {
+  break-inside: avoid;
+}
+
+/* File upload field (dark form card) */
+.file-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(184, 197, 209, 0.4);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), background var(--transition);
+  cursor: pointer;
+}
+
+.file-field:hover,
+.file-field:focus-within {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.file-field input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-field-icon {
+  flex-shrink: 0;
+  color: var(--gold);
+  display: inline-flex;
+}
+
+.file-field-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.file-field-cta {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.file-field-hint {
+  font-size: 0.78rem;
+  color: var(--silver-dim);
+}
+
+.file-field-name {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .careers-jd-cols {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .careers-offer .careers-list {
+    columns: 1;
+  }
+}
+/* version bump: main.css v4.4.0 (Careers page) */

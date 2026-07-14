@@ -9,7 +9,7 @@ Every item below must be resolved before the site can go live. Work through them
 
 - [ ] **Resend API Key**
   - **What it is:** API key that lets the contact form actually send email to Kolton's inbox.
-  - **Where it is used:** `api/contact.js` reads `process.env.RESEND_API_KEY`. Also required for Vercel environment variables.
+  - **Where it is used:** `api/contact.js` AND `api/careers.js` both read `process.env.RESEND_API_KEY` (same single key, no separate credential for the careers/resume handler). Also required for Vercel environment variables.
   - **How to get it:**
     1. Go to https://resend.com and log in to the Aeopic account.
     2. Click "API Keys" in the left sidebar.
