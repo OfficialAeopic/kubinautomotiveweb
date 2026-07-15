@@ -4276,8 +4276,8 @@ p:last-child {
 
 /* "What Kubin offers" band sits inside a light section */
 .careers-offer {
-  margin-top: clamp(2.5rem, 5vw, 3.75rem);
-  padding-top: clamp(2rem, 4vw, 2.75rem);
+  margin-top: clamp(3.5rem, 7vw, 5rem);
+  padding-top: clamp(2.75rem, 5vw, 3.5rem);
   border-top: 1px solid rgba(122, 143, 160, 0.28);
 }
 
@@ -4363,4 +4363,4 @@ p:last-child {
     columns: 1;
   }
 }
-/* version bump: main.css v4.4.0 (Careers page) */
+/* version bump: main.css v4.4.4 (careers offers-section top gap increase, COO 2026-07-15) */
