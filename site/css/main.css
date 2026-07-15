@@ -283,6 +283,29 @@ p:last-child {
 }
 
 /* ==============================
+   Reduced Motion (fail-open)
+   Under prefers-reduced-motion every animated element must resolve to its
+   final VISIBLE state immediately. Scroll-reveal items are opacity:0 until a
+   JS class flips them; below-fold items would otherwise stay invisible.
+============================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal],
+  [data-reveal="left"],
+  [data-reveal="right"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==============================
    Buttons
 ============================== */
 .btn {
@@ -548,13 +571,15 @@ p:last-child {
   padding: 10px 0 8px;
   z-index: 800;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--duration-layout) var(--ease-out-quart), transform var(--duration-layout) var(--ease-out-quart);
+  transition: opacity var(--duration-layout) var(--ease-out-quart), transform var(--duration-layout) var(--ease-out-quart), visibility var(--duration-layout) var(--ease-out-quart);
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
   transform: translateX(-50%) translateY(0);
 }
@@ -652,13 +677,15 @@ p:last-child {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translateX(100%);
-  transition: opacity var(--duration-layout) var(--ease-out-quart), transform var(--duration-layout) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--duration-layout) var(--ease-out-quart), transform var(--duration-layout) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--duration-layout) var(--ease-out-quart);
 }
 
 .mobile-overlay.active {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
   transform: translateX(0);
 }
@@ -858,14 +885,16 @@ p:last-child {
     border-bottom: 2px solid var(--gold);
     transform: translateY(-110%);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: transform var(--duration-layout) var(--ease-out-quart), opacity var(--duration-layout) var(--ease-out-quart);
+    transition: transform var(--duration-layout) var(--ease-out-quart), opacity var(--duration-layout) var(--ease-out-quart), visibility var(--duration-layout) var(--ease-out-quart);
     z-index: 999;
   }
 
   .site-nav.open {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
   }
 
@@ -929,6 +958,9 @@ p:last-child {
   justify-content: center;
   overflow: hidden;
   padding-top: 56px;
+  /* Solid dark backdrop behind the video/still so hero text has a measurable
+     dark surface for contrast (light text over dark), not the page white. */
+  background-color: var(--navy);
 }
 
 .hero-bg {
@@ -940,6 +972,8 @@ p:last-child {
 
 .hero-bg img,
 .hero-bg video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1155,6 +1189,12 @@ p:last-child {
 .services-section {
   padding: var(--section-pad) 0;
   background: var(--off-white);
+}
+
+/* Section label sits on the light off-white services band; the bright gold
+   fails WCAG AA on light. Use a deep brass that clears 4.5:1 on off-white. */
+.services-section .section-label {
+  color: #7a5c16;
 }
 
 /* Tab nav */
@@ -2110,15 +2150,15 @@ p:last-child {
   gap: 0.75rem;
   padding-top: 1.75rem;
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: var(--silver-dim);
 }
 
 .footer-license {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .footer-bottom a {
-  color: var(--text-muted);
+  color: var(--silver-dim);
   transition: color var(--transition);
 }
 

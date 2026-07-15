@@ -5,6 +5,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.5.1 - 2026-07-15
+
+### Fixed (homepage preflight failures, index.html only)
+
+- **Overlap (4 sibling-overlap collisions).** The hero background media (`.hero-bg img` / `.hero-bg video`) was position:static inside the absolute `.hero-bg` layer, so preflight's sibling-overlap probe measured it colliding with `.hero-badge`, the `<h1>`, and `.hero-desc` (the parent-key hash ignores class names, so the media and the text-content siblings hashed to the same group). Set the hero media to `position:absolute; inset:0` so it drops out of the static-flow overlap group; visually identical. The 4th collision was the off-screen `.mobile-overlay` close-icon `<line>` pair (hidden via transform only), now removed from measurement by adding `visibility:hidden` to the closed overlay.
+- **Contrast (17-18 WCAG AA failures).** The hero had no measurable dark surface: text sits over an absolutely-positioned video/still, so the contrast probe walked up to the page white and scored every hero element (badge, h1, desc, outline button, 4 trust items, 2 stat numbers, 3 stat labels) as light-on-white. Added `background-color: var(--navy)` to `.hero` so the dark backdrop is measurable (light text on navy passes). Footer-bottom fine print moved from `--text-muted` (3.44:1 on navy) to `--silver-dim` (4.9:1). The services-section `.section-label` gold-on-off-white (2.04:1) recolored to a deep brass `#7a5c16` (5.5:1 on off-white). The mobile nav-CTA navy-on-navy failure cleared by the mobile `.site-nav` visibility fix below.
+- **Reduced-motion trap (1-4 elements at opacity 0 under reduce).** No `@media (prefers-reduced-motion: reduce)` block existed. Added a fail-open block that neutralizes animation/transition durations and forces every `[data-reveal]` element to `opacity:1; transform:none` so below-fold reveals are visible immediately under reduce. Also added `visibility:hidden` (toggled to `visible` on open/hover) to `.nav-dropdown-menu`, mobile `.site-nav`, and `.mobile-overlay`, which were opacity:0-only and thus flagged as trapped/invisible content.
+
+### Verified
+
+- Playwright re-measure of index.html (chromium + webkit, 375/768/1280) using preflight's own overlap/contrast/reduced-motion probes: zero sibling overlaps, zero contrast failures, zero reduced-motion traps. Cache-busted the main.css query to `?v=20260715-v451`.
+
+---
+
 ## v4.5.0 - 2026-07-15 (launch candidate)
 
 ### Changed
