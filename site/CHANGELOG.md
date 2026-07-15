@@ -5,6 +5,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.5.0 - 2026-07-15 (launch candidate)
+
+### Changed
+
+- **SO42 nav order fix (all 16 pages).** Moved the About link to be the LAST regular nav item, immediately before the Get Started CTA, across all three nav surfaces: desktop nav, mobile overlay, and footer nav. Final order: Home, Services, Reviews, Location, Careers, Contact, About, [Get Started]. Applied to the 8 primary pages (index, services, about, contact, careers, reviews, location, get-started) and the 8 service detail pages. All `aria-current="page"` active-state markers preserved per page. Service detail pages retain their existing 5-link nav (no Careers link) with About repositioned last.
+- **Cache-busting meta block (all 16 pages).** Added 4 cache-control meta tags to every page head: `Cache-Control` (no-cache, no-store, must-revalidate), `Pragma`, `Expires`, and a `build-ts` meta stamped with the current epoch (1784092633) to force fresh content on launch.
+
+### Verified (pre-launch audit)
+
+- One-line nav rule (v4.4.3 flex layout) re-verified via Playwright at 1024/1151/1280/1440/1920; hamburger at <=1150; 375px no overflow. Single-row nav and logo-to-first-link clearance hold on all pages.
+- SO24: zero unvetted prices sitewide (regex `\$\d` returns no matches in any page).
+- Zero "Alumni" strings in any shippable page (only reference is this changelog's own v4.4.2 fix record).
+- Placeholder credentials inventoried (unchanged, swap before go-live): GA4 `G-XXXXXXXXXX` and Meta Pixel `0000000000000000` on all pages; `RESEND_API_KEY` env var; Resend domain verification for kubinautomotive.com.
+- sitemap.xml lists all 8 primary pages plus 8 service detail pages. Internal nav links resolve (all targets exist as directory routes).
+
+---
+
 ## v4.4.3 - 2026-07-14
 
 ### Fixed
