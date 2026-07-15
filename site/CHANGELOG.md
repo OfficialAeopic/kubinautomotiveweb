@@ -5,6 +5,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.4.3 - 2026-07-14
+
+### Fixed
+
+- **Top nav logo/link collision (all pages).** The desktop nav (`.site-nav`) was `position:absolute` centered on the 1104px container, so it ignored the logo entirely and overlapped it at every viewport width: a constant ~45px overlap once the container hit max-width, widening to ~133px at 1024px. The v4.4.1 Careers link widened the link list and made it more obvious. Playwright measured intersections at 1024/1100/1200/1280/1366/1440/1600/1920 on all 8 pages.
+- Fix per the Aeopic nav one-line rule: converted `.header-inner` to a `flex` `space-between` row (logo left, nav right) with `flex-shrink:0` on `.header-logo`, `flex-wrap:nowrap` on the row and `.site-nav`, and `white-space:nowrap` on `.nav-links`/`li`. Logo and nav are now flex siblings that cannot overlap.
+- Raised the hamburger breakpoint from `max-width:768px` to `max-width:1150px` on the nav block so the mobile menu appears before the widened list can crowd the logo (hero media query left at 768px). Added a `1151-1400px` taper that scales down nav gap, link font-size, CTA padding, and logo height.
+- Neutralized the horizontal `translateX` reveal offset on `<=768px` (`[data-reveal="left"|"right"]` now rise vertically) so an off-screen pre-reveal transform in the about-home split-section no longer inflates the 375px `scrollWidth` (was 403, now 375).
+
+### Verified
+
+- Playwright re-measure across 1024/1100/1200/1280/1366/1440/1600/1920 plus 375px, all 8 pages: zero intersections, logo-to-first-link clearance 121-202px at every desktop width (min 121px, well above the 24px floor). Hamburger appears at/below 1150px (1150 = burger, 1151 = nav with 153px clearance). 375px: no overflow, hamburger works, mobile overlay intact. Header ribbon "Aggie Owned & Operated" renders correctly at all widths.
+
 ## v4.4.2 - 2026-07-14
 - Replaced all "Alumni Owned & Operated" phrasing with "Aggie Owned & Operated" (4 instances on index.html: hero badge, trust line, callout section aria-label + heading). Per TAMU Licensing email 2026-06-08 (via Justin): approved phrase is "Aggie Owned and Operated", university does not say "Alumni", and does not object to website use. Approval screenshot archived at assets/compliance/tamu-licensing-aggie-owned-approval-2026-06-08.png.
 

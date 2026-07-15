@@ -1,6 +1,17 @@
-/* Kubin Automotive Service — main.css v4.4.0
+/* Kubin Automotive Service — main.css v4.4.3
    Brand: Navy #0D1B2A | Silver #B8C5D1 | Gold #C9A84C
    Fonts: Playfair Display (headings) | Inter (body)
+   v4.4.3: Nav collision fix. The desktop nav was position:absolute centered on
+           the container, so it ignored the logo and overlapped it at every width
+           (constant ~45px at max-width, worse when narrow); the Careers link
+           widened the list further. Converted the header to a flex space-between
+           row (logo left, nav right) with flex-shrink:0 on the logo and
+           nowrap guards so logo and nav are siblings that can never overlap.
+           Raised the hamburger breakpoint 768 -> 1150 so the menu collapses
+           before the row can crowd. Added a 1151-1400px taper (gap/font/logo
+           height). Neutralized the horizontal reveal translateX on mobile so
+           off-screen reveals no longer inflate 375px scrollWidth. Clearance is
+           now >=121px at every desktop width; zero intersections.
    v4.4.0: Careers / Hiring page. New .careers-badge, .careers-jd-lead,
            .careers-jd-cols, .careers-list, .careers-offer, and the
            .file-field resume-upload control (dark form card). No card grids.
@@ -261,6 +272,16 @@ p:last-child {
   transform: translate(0, 0);
 }
 
+/* Mobile: use vertical reveal only. The horizontal translateX pre-reveal state
+   pushes off-screen content past the viewport edge and inflates scrollWidth on
+   narrow screens. Rise-in keeps the effect without any horizontal overflow. */
+@media (max-width: 768px) {
+  [data-reveal="left"],
+  [data-reveal="right"] {
+    transform: translateY(36px);
+  }
+}
+
 /* ==============================
    Buttons
 ============================== */
@@ -388,7 +409,9 @@ p:last-child {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap;
   position: relative;
   height: 80px;
   padding: 0;
@@ -399,6 +422,7 @@ p:last-child {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
   z-index: 10;
 }
 
@@ -433,13 +457,26 @@ p:last-child {
 }
 
 .site-nav {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.nav-links,
+.nav-links li {
+  white-space: nowrap;
+}
+
+/* Nav taper: shrink gap + font between the hamburger breakpoint and 1400px
+   so the desktop row keeps >=24px logo clearance without wrapping. */
+@media (min-width: 1151px) and (max-width: 1400px) {
+  .site-nav { gap: 1rem; }
+  .nav-link { font-size: 0.82rem; padding: 8px 11px; letter-spacing: 0; }
+  .nav-cta { padding: 8px 15px !important; }
+  .header-logo img { height: 118px; }
 }
 
 .nav-link {
@@ -802,7 +839,7 @@ p:last-child {
 }
 
 /* Hide old site-nav slide-out on mobile; show hamburger */
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .nav-toggle {
     display: flex;
     margin-left: auto;
