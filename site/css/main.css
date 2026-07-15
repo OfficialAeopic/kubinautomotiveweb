@@ -362,7 +362,7 @@ p:last-child {
 }
 
 .site-header::after {
-  content: "Alumni Owned & Operated";
+  content: "Aggie Owned & Operated";
   position: absolute;
   left: 50%;
   top: 100%;
