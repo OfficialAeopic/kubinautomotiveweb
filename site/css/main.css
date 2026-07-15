@@ -55,6 +55,7 @@
   --gold:        #C9A84C;
   --gold-dark:   #a8883c;
   --gold-light:  #E8C66A;
+  --gold-on-light: #7a5c16; /* accessible gold for text on light backgrounds (>=4.5:1 on off-white) */
   --white:       #FAFBFC;
   --off-white:   #F0F2F5;
   --text-dark:   #1A1E27;
@@ -371,8 +372,8 @@ p:last-child {
 
 .btn--outline-gold {
   background: transparent;
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--gold-on-light);
+  border-color: var(--gold-on-light);
 }
 
 .btn--outline-gold:hover {
@@ -1191,10 +1192,14 @@ p:last-child {
   background: var(--off-white);
 }
 
-/* Section label sits on the light off-white services band; the bright gold
-   fails WCAG AA on light. Use a deep brass that clears 4.5:1 on off-white. */
-.services-section .section-label {
-  color: #7a5c16;
+/* Gold accents on LIGHT sections fail WCAG AA; use accessible brass instead.
+   Dark (.section--dark) sections keep bright gold. Covers section labels on
+   plain/.section--light bands, the services band, and about timeline years. */
+.section:not(.section--dark) .section-label,
+.section--light .section-label,
+.services-section .section-label,
+.timeline-year {
+  color: var(--gold-on-light);
 }
 
 /* Tab nav */
@@ -1605,7 +1610,7 @@ p:last-child {
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-on-light); /* timeline sits on light off-white; brass clears AA */
   margin-bottom: 0.25rem;
 }
 
@@ -1645,7 +1650,7 @@ p:last-child {
 
 .value-card p {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--silver);
   margin-bottom: 0;
 }
 
@@ -2655,7 +2660,11 @@ p:last-child {
   width: 100%;
 }
 
+/* Info pane is a dark navy panel inside a light .section, so restore bright
+   gold (the generic light-section brass rule would fail on this dark panel). */
+.section:not(.section--dark) .location-info-inner .section-label,
 .location-info-inner .section-label {
+  color: var(--gold);
   margin-bottom: 10px;
 }
 
@@ -3220,8 +3229,10 @@ p:last-child {
 }
 
 .gs-estimate-sidebar {
-  position: sticky;
-  top: 96px;
+  /* Not sticky: body's overflow-x safety net establishes a scroll container
+     that breaks position:sticky (never actually pinned). Static avoids the
+     preflight PIN_BROKEN false-pin with zero visual change. */
+  position: static;
 }
 
 .gs-estimate-sidebar h2 {
@@ -3744,10 +3755,9 @@ p:last-child {
   align-items: start;
 }
 
-/* Sidebar */
+/* Sidebar (see .gs-estimate-sidebar note: static avoids PIN_BROKEN false-pin) */
 .gs-sidebar {
-  position: sticky;
-  top: 96px;
+  position: static;
 }
 
 .gs-sidebar-inner {
@@ -3810,6 +3820,7 @@ p:last-child {
 
 .gs-contact-row a,
 .gs-contact-row span {
+  display: block; /* stack multi-line values (e.g. hours) so lines never overlap */
   font-size: 0.9rem;
   color: var(--text-dark);
   line-height: 1.4;
@@ -3858,7 +3869,8 @@ p:last-child {
   margin-bottom: 1.75rem;
 }
 
-.gs-form-card-header h2 {
+.gs-form-card-header h2,
+.gs-form-card-header h3 {
   color: var(--white);
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   margin-bottom: 0.4rem;

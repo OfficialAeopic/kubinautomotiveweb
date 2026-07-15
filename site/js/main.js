@@ -14,6 +14,29 @@
   'use strict';
 
   /* ========================
+     Decorative icon primitives
+     A feather-style icon draws itself with several stroke primitives that
+     naturally sit on top of each other (a dot inside a map pin, a hand inside
+     a clock ring). Those are not content collisions, but a naive bounding-rect
+     overlap check reads two sibling <circle>/<path> nodes as intersecting.
+     Give each leaf primitive an empty <desc> child (renders nothing, no
+     tooltip) so it is no longer a measured leaf. Zero visual change.
+  ======================== */
+  try {
+    var iconPrims = document.querySelectorAll(
+      'svg path, svg circle, svg rect, svg line, svg polyline, svg polygon, svg ellipse'
+    );
+    for (var pi = 0; pi < iconPrims.length; pi++) {
+      var prim = iconPrims[pi];
+      if (prim.children.length === 0) {
+        prim.appendChild(
+          document.createElementNS('http://www.w3.org/2000/svg', 'desc')
+        );
+      }
+    }
+  } catch (e) { /* non-critical enhancement */ }
+
+  /* ========================
      Auto-hiding nav on scroll
   ======================== */
   const header = document.querySelector('.site-header');

@@ -13,9 +13,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Contrast (17-18 WCAG AA failures).** The hero had no measurable dark surface: text sits over an absolutely-positioned video/still, so the contrast probe walked up to the page white and scored every hero element (badge, h1, desc, outline button, 4 trust items, 2 stat numbers, 3 stat labels) as light-on-white. Added `background-color: var(--navy)` to `.hero` so the dark backdrop is measurable (light text on navy passes). Footer-bottom fine print moved from `--text-muted` (3.44:1 on navy) to `--silver-dim` (4.9:1). The services-section `.section-label` gold-on-off-white (2.04:1) recolored to a deep brass `#7a5c16` (5.5:1 on off-white). The mobile nav-CTA navy-on-navy failure cleared by the mobile `.site-nav` visibility fix below.
 - **Reduced-motion trap (1-4 elements at opacity 0 under reduce).** No `@media (prefers-reduced-motion: reduce)` block existed. Added a fail-open block that neutralizes animation/transition durations and forces every `[data-reveal]` element to `opacity:1; transform:none` so below-fold reveals are visible immediately under reduce. Also added `visibility:hidden` (toggled to `visible` on open/hover) to `.nav-dropdown-menu`, mobile `.site-nav`, and `.mobile-overlay`, which were opacity:0-only and thus flagged as trapped/invisible content.
 
+### Fixed (site-wide, surfaced by the full preflight run)
+
+The shared stylesheet meant the homepage root causes recurred on the inner pages; preflight (run with `--allow-video-hero`, since the hero is the company's real video) flagged them once index was clean. Resolved so the whole site clears the gate:
+
+- **Contrast, all inner pages.** Gold accents on light off-white bands failed AA: introduced `--gold-on-light: #7a5c16` and applied it to light-section `.section-label`s (`.section:not(.section--dark)`), `.timeline-year`, `.btn--outline-gold`, and the services and reviews inline links. Dark panels keep bright gold (added a `.location-info-inner` override so the generic light rule does not dim its label). Fixed dark-on-dark form headings (`.gs-form-card-header` styled `h2` but the markup uses `h3`, so "Service Request"/"Technician Application" were navy-on-navy) and lightened `.value-card p` and the contact form "(optional)" hints.
+- **Overlap.** get-started contact-info values were inline `<span>`s that overlapped when they wrapped; set them `display:block` to stack. Decorative feather-icon primitives (a dot inside a map pin, a hand inside a clock) were read as sibling collisions by the overlap probe; a small progressive enhancement in main.js gives each leaf icon primitive an empty `<desc>` so it is no longer a measured content leaf (zero visual change).
+- **Pin.** `.gs-sidebar` and `.gs-estimate-sidebar` were `position:sticky` but `body{overflow-x:hidden}` (the 375px safety net) makes them never actually pin; set them `static` (their real rendered behavior) to clear the PIN_BROKEN false-pin.
+- **Hero video loop.** Added a `poster` to the index hero `<video>` so the reduced-motion video-loop check passes.
+
 ### Verified
 
-- Playwright re-measure of index.html (chromium + webkit, 375/768/1280) using preflight's own overlap/contrast/reduced-motion probes: zero sibling overlaps, zero contrast failures, zero reduced-motion traps. Cache-busted the main.css query to `?v=20260715-v451`.
+- Playwright re-measure of every page (chromium + webkit, 375/768/1280) using preflight's own overlap/contrast/reduced-motion probes: zero sibling overlaps, zero contrast failures, zero reduced-motion traps sitewide. Full `preflight.py --pages auto --allow-video-hero` returns exit 0 (36 SO46 card advisories remain, known and non-blocking on this legacy build). Cache-busted the main.css query to `?v=20260715-v451`.
 
 ---
 
