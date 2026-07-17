@@ -5,6 +5,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## v4.5.2 - 2026-07-17
+- Removed footer "TACL License: Available on request" claim (Sam catch, valid): TACL is the Texas stationary-HVAC contractor license, not applicable to an auto shop. Vehicle A/C work falls under EPA Section 609 technician certification. A "609 Certified Technicians" line will be added only after Kolton confirms certification. No other license/certification claims exist on the site.
+
 ## v4.5.1 - 2026-07-15
 
 ### Fixed (homepage preflight failures, index.html only)
