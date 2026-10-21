@@ -1,3 +1,9 @@
+## v4.5.3 (2026-10-21) - Remove unverified testimonials, tire references and dead tracking
+- Reviews page: removed the 4 unattributed "Google Review" testimonials, the star blocks, the "Real customers" photo banner and the "Join thousands of drivers" line. The page now carries only a link to read reviews on Google (add real, attributed reviews only after Kolton confirms them). Meta/OG descriptions no longer claim "real reviews".
+- Chatbot knowledge base: removed the "trusted-by-bryan-college-station" entry (contained a customer testimonial and a "$2,000" savings claim) and neutralised the "reviews" answer.
+- Kubin does no tire work: removed "Tires" from the contact form Service Needed dropdown, "Tire pressure check" from the services page and "Tire pressure check and adjustment" from the oil-change page, and the chatbot's tire-pressure/TPMS answer. The heritage photo caption on the About page is unchanged (no current-service claim).
+- Tracking: removed the placeholder GA4 (G-XXXXXXXXXX) and all-zeros Meta Pixel snippets from all pages. Form-submit calls to fbq are already guarded by typeof checks. Real IDs to be added when Kolton provides them.
+
 ## [Unreleased] - 2026-05-15
 - Trademark protection sweep per SO38. Removed all "Aggie" and "Aggieland" references from visible body copy across home, about, and get-started pages. Replaced with geographic descriptors (Bryan, Brazos Valley, BCS). CSS watermark "AGGIELAND" replaced with "BRYAN". Removed unverified claim that Kolton Kubin is a Texas A&M student/alumnus from his bio (his wife may be the actual alumnus; pending client verification). CSS class names with `aggie-` prefix retained as internal markup IDs (not user-visible).
 - Stripped 4 remaining Texas A&M references (JSON-LD description, hero photo alt-text, customer-base body copy, location landmark). University-generic replacements used.

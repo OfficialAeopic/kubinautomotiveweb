@@ -825,26 +825,7 @@ window.CHATBOT_KB = {
         "google",
         "facebook"
       ],
-      "response": "Brazos Valley drivers have trusted us with their vehicles for over four decades. Here is what a few of them have to say. Google • Facebook • Word of Mouth <a href=\"/reviews/\">Learn more</a>",
-      "chips": []
-    },
-    {
-      "id": "trusted-by-bryan-college-station",
-      "patterns": [
-        "trusted",
-        "bryan",
-        "college",
-        "station",
-        "honest",
-        "service",
-        "earns",
-        "reviews",
-        "come",
-        "real",
-        "customers",
-        "marketing"
-      ],
-      "response": "Honest service earns honest reviews. These come from real customers, not a marketing script. “ I brought my truck in thinking it needed a major transmission job. They checked it out and told me it was a simple sensor issue. Saved me close to $2,000. That kind of honesty is why I will never go anywhere else. R Robert M. Bryan, TX • F-250 Owner “ My late husband used to take every car we owned to Ku... <a href=\"/reviews/\">Learn more</a>",
+      "response": "You can read what customers say about Kubin Automotive on Google. <a href=\"/reviews/\">See our reviews</a>",
       "chips": []
     },
     {
@@ -1496,25 +1477,6 @@ window.CHATBOT_KB = {
       "chips": [
         "Book alignment",
         "Suspension"
-      ]
-    },
-    {
-      "id": "tire-pressure",
-      "patterns": [
-        "tire pressure",
-        "tpms",
-        "tpms light",
-        "low tire pressure light",
-        "tire pressure sensor",
-        "tire pressure warning",
-        "psi",
-        "check tire pressure",
-        "low air warning"
-      ],
-      "response": "We check tire pressure on every service visit and can reset your TPMS system. If your TPMS light stays on, that is usually a sensor battery failing, which typically happens around 7 to 10 years.",
-      "chips": [
-        "Book service",
-        "Location"
       ]
     },
     {
