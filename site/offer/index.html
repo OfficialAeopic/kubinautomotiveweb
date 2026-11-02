@@ -20,19 +20,19 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kubinautomotive.com/offer/">
   <meta property="og:title" content="Follow Us for an Offer | Kubin Automotive Service | Bryan, TX">
-  <meta property="og:description" content="Read Kubin Automotive Service reviews on Google.">
+  <meta property="og:description" content="Follow Kubin Automotive on Instagram or Facebook and show this page at the counter for an exclusive offer.">
   <meta property="og:image" content="https://kubinautomotive.com/images/engine-block-workbench.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Customer Reviews | Kubin Automotive Service">
-  <meta name="twitter:description" content="Read Kubin Automotive Service reviews on Google.">
+  <meta name="twitter:title" content="Follow Us for an Offer | Kubin Automotive Service">
+  <meta name="twitter:description" content="Follow Kubin Automotive on Instagram or Facebook and show this page at the counter for an exclusive offer.">
   <meta name="twitter:image" content="https://kubinautomotive.com/images/engine-block-workbench.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -41,21 +41,148 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/css/main.css?v=20260516-mobile-tabs">
   <style>
-    .offer-wrap{max-width:640px;margin:0 auto}
-    .offer-card{background:var(--navy);color:var(--white);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center}
-    .offer-card .eyebrow{color:var(--gold-light);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-    .offer-card h2{color:var(--gold-light);font-family:var(--font-heading);font-size:clamp(2rem,8vw,3rem);margin:.4rem 0 .75rem}
-    .offer-card p{color:var(--silver-light)}
-    .offer-valid{display:inline-block;margin-top:.5rem;font-weight:600;color:var(--white)}
-    .offer-follow{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin:1.5rem 0 1rem}
-    .offer-fine{list-style:none;padding:0;margin:1rem 0 0;font-size:.85rem;color:var(--silver)}
-    .offer-fine li{margin:.2rem 0}
-    .review-box{margin-top:2.5rem;padding:1.5rem;border:1px solid var(--silver-dim);border-radius:var(--radius-md);text-align:center;background:var(--off-white)}
-    .review-box h2{font-size:1.4rem;color:var(--text-dark)}
-    .review-box p{color:var(--text-body)}
-    .review-note{font-size:.85rem;color:var(--text-muted)}
-    .link-row{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+    :root{--maroon:#6B1426;--maroon-d:#4A0E1A;--parch:#EFE5CE;--parch-d:#E2D4B3;--ink:#1B1410;--gold2:#E3B75A}
+    body{background:var(--navy)}
+    /* Held claim: sitewide header tab 'Aggie Owned & Operated' is hidden on this page until Kolton confirms */
+    .site-header::after{content:none!important;display:none!important}
+    .o-head{font-family:'Barlow Condensed','Oswald',Impact,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+    .o-serif{font-family:var(--font-heading);font-style:italic;font-weight:900}
+    .o-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(#E8C66A,#C9A84C);color:#1B1410;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.1rem;border-radius:8px;border:1px solid #f3d98f;box-shadow:0 2px 10px rgba(0,0,0,.35);text-decoration:none;min-height:44px}
+    .o-btn:hover{filter:brightness(1.07)}
+    .o-btn svg{width:18px;height:18px;flex:none}
+    /* HERO */
+    .o-hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 85% 10%,#5a2a2f 0,#1a1520 38%,#0a1018 75%);padding:clamp(104px,12vw,128px) 0 0}
+    .o-hero-photo{position:absolute;inset:0 0 0 auto;width:48%;background:url('/images/kolton-photos/kubin-auto-sign.jpg') center 35%/cover no-repeat;opacity:.85;filter:saturate(.9);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 70%);mask-image:linear-gradient(90deg,transparent 0,#000 70%)}
+    .o-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,24,.35) 0,rgba(10,16,24,.15) 40%,rgba(10,16,24,.92) 100%);pointer-events:none}
+    .o-hero .container{position:relative;z-index:2}
+    .o-ribbon{display:inline-block;background:linear-gradient(90deg,var(--maroon-d),var(--maroon));color:#fff;border:1px solid rgba(201,168,76,.55);font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:clamp(.85rem,2.4vw,1.1rem);padding:.45rem 1.6rem .45rem 1.1rem;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 50%,100% 100%,0 100%)}
+    .o-h1{margin:1.1rem 0 0;font-size:clamp(3rem,10vw,5.4rem);color:#F3EEE2;text-shadow:0 3px 18px rgba(0,0,0,.55)}
+    .o-h1 span{display:block;color:var(--gold2)}
+    .o-brush{width:min(380px,70%);height:9px;margin:.7rem 0 1.1rem;background:linear-gradient(90deg,var(--maroon) 0,#8a1d33 70%,transparent);border-radius:6px;transform:skewX(-20deg)}
+    .o-sub{font-size:clamp(1.05rem,2.6vw,1.35rem);max-width:30ch;color:#f1ece0;margin:0 0 1.6rem}
+    .o-offer-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem 2rem;margin-bottom:2rem}
+    .o-ticket{position:relative;background:linear-gradient(135deg,#F6E7BC,#E5CD8E 60%,#EBD79F);color:var(--maroon);padding:1.1rem 2.6rem 1rem;text-align:center;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 3px rgba(150,110,30,.35);
+      -webkit-mask:radial-gradient(circle 8px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 8px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat}
+    .o-ticket .amt{display:block;font-family:var(--font-heading);font-style:italic;font-weight:900;font-size:clamp(3.4rem,13vw,5.6rem);line-height:1;letter-spacing:-.02em}
+    .o-ticket .item{display:flex;align-items:center;gap:.6rem;justify-content:center;font-weight:700;letter-spacing:.28em;font-size:clamp(.78rem,2.6vw,1.05rem);color:#2a1a10;margin-top:.1rem}
+    .o-ticket .item::before,.o-ticket .item::after{content:"";height:2px;width:1.6rem;background:#2a1a10;flex:none}
+    .o-follow{display:flex;align-items:center;gap:1rem}
+    .o-follow .lbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.05;border-left:1px solid rgba(201,168,76,.4);padding-left:1.4rem}
+    .o-ico{width:60px;height:60px;border-radius:14px;display:grid;place-items:center;background:#0e1118;border:1.5px solid var(--gold);box-shadow:0 0 18px rgba(201,168,76,.25)}
+    .o-ico svg{width:30px;height:30px}
+    .o-ico-row{display:flex;gap:.7rem;margin-top:.6rem}
+    .o-valid{display:block;margin-top:.6rem;font-size:.9rem;color:#e9dfc8}
+    .o-trust{list-style:none;margin:0;padding:1.4rem 0 1.8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .o-trust li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;padding:0 .6rem;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#f1ece0}
+    .o-trust li+li{border-left:1px solid rgba(201,168,76,.28)}
+    .o-trust svg{width:38px;height:38px;color:var(--gold2)}
+    .o-ended{background:#16202c;border:1px solid var(--gold);border-radius:12px;padding:1.6rem;margin-bottom:2rem;max-width:560px}
+    .o-ended h2{color:var(--gold2);font-family:var(--font-heading);margin:0 0 .4rem}
+    /* ribbon divider */
+    .o-divide{position:relative;height:46px;background:linear-gradient(var(--navy),var(--navy)) top/100% 50% no-repeat,var(--parch)}
+    .o-divide::before{content:"";position:absolute;left:0;right:0;top:0;height:46px;background:linear-gradient(176deg,#0a1018 49%,var(--maroon) 50%,#a02440 54%,var(--parch) 56%);}
+    .o-badge{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:62px;height:62px;color:#fff;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5));z-index:2}
+    /* PARCHMENT */
+    .o-parch{position:relative;background:
+      radial-gradient(120% 70% at 50% 0,rgba(255,255,255,.35),transparent 60%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .34  0 0 0 0 .18  0 0 0 .22 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>"),
+      var(--parch);color:var(--ink);overflow:hidden}
+    .o-wrench{position:absolute;left:-60px;top:20px;width:300px;opacity:.13;color:#5c4a2c;pointer-events:none}
+    .o-platform{padding:clamp(34px,5vw,64px) 0 clamp(30px,5vw,56px);text-align:center}
+    .o-platform h2{font-size:clamp(2.1rem,7vw,3.6rem);margin:0;color:var(--ink)}
+    .o-platform .kick{letter-spacing:.2em;text-transform:uppercase;font-size:clamp(.72rem,2.2vw,.95rem);font-weight:600;margin:.5rem 0 .9rem}
+    .o-rule{width:90px;height:3px;background:linear-gradient(90deg,#C9A84C,#E8C66A);margin:0 auto 1.8rem}
+    .o-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;text-align:left;position:relative;z-index:1}
+    .o-card{position:relative;display:grid;grid-template-columns:42% 1fr;gap:.5rem;align-items:center;background:radial-gradient(90% 120% at 20% 50%,#2a2420,#0e0f14 70%);border:2px solid var(--gold);border-radius:16px;padding:1.2rem 1.2rem 1.2rem 0;overflow:hidden;box-shadow:0 8px 22px rgba(60,40,10,.35);color:#fff}
+    .o-phone{position:relative;justify-self:center;width:min(130px,80%);aspect-ratio:9/17;border-radius:22px;border:3px solid #6e5a2b;background:#05060a;transform:rotate(-8deg);box-shadow:0 0 0 2px #1d1a14,0 12px 26px rgba(0,0,0,.6);display:grid;place-items:center;margin-left:.8rem}
+    .o-phone::before{content:"";position:absolute;inset:0;border-radius:19px;opacity:.9}
+    .o-phone.ig::before{background:radial-gradient(70% 50% at 50% 50%,rgba(255,80,140,.55),rgba(120,40,160,.25) 60%,transparent)}
+    .o-phone.fb::before{background:radial-gradient(70% 50% at 50% 50%,rgba(40,110,255,.65),rgba(20,50,160,.3) 60%,transparent)}
+    .o-phone svg{position:relative;width:62%;filter:drop-shadow(0 0 12px rgba(255,255,255,.35))}
+    .o-card .kick{color:var(--gold);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+    .o-card h3{font-size:clamp(1.9rem,4vw,2.6rem);margin:.1rem 0 0;color:#fff}
+    .o-card h3::after{content:"";display:block;width:34px;height:3px;background:#8a1d33;margin:.35rem 0 .6rem}
+    .o-card p{font-size:.92rem;color:#e7e1d4;margin:0 0 1rem}
+    /* REDEEM */
+    .o-redeem{background:linear-gradient(180deg,#0b1626,#0d1b2a);color:#fff;padding:clamp(26px,4vw,40px) 0 clamp(26px,4vw,38px)}
+    .o-redeem-title{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem}
+    .o-redeem-title::before,.o-redeem-title::after{content:"";flex:1;height:1px;background:rgba(201,168,76,.55)}
+    .o-redeem-title span{background:linear-gradient(90deg,var(--maroon-d),var(--maroon));border:1px solid rgba(201,168,76,.5);padding:.5rem 2rem;font-style:italic;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(.8rem,2.6vw,1.15rem);clip-path:polygon(0 0,100% 0,calc(100% - 12px) 50%,100% 100%,0 100%,12px 50%)}
+    .o-steps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:1rem}
+    .o-step{text-align:center}
+    .o-step .n{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:radial-gradient(#E8C66A,#B8923a);color:#2a1a10;font-family:var(--font-heading);font-weight:900;font-size:1.4rem;box-shadow:0 0 0 3px rgba(201,168,76,.3);vertical-align:middle;margin-right:.6rem}
+    .o-step .ic{display:inline-block;vertical-align:middle;width:64px;height:64px;color:var(--gold2)}
+    .o-step h3{margin:.5rem 0 .2rem;font-family:var(--font-heading);font-style:italic;font-weight:900;font-size:clamp(1.15rem,2.6vw,1.6rem);text-transform:uppercase;color:#fff}
+    .o-step h3.gold{color:var(--gold2)}
+    .o-step p{margin:0;font-size:.92rem;color:#d4dde6;max-width:26ch;margin-inline:auto}
+    .o-chev{color:var(--gold2);width:22px;height:34px}
+    .o-fine{list-style:none;margin:1.6rem auto 0;padding:1rem 0 0;border-top:1px solid rgba(201,168,76,.25);max-width:760px;font-size:.8rem;color:#aebbc9;text-align:center}
+    .o-fine li{display:inline}
+    .o-fine li+li::before{content:" · "}
+    /* FAMILY */
+    .o-family{padding:clamp(30px,5vw,56px) 0}
+    .o-family .container{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr) minmax(0,.85fr);gap:clamp(1.2rem,3vw,2.4rem);align-items:center}
+    .o-polaroid{background:#f7f1e1;padding:.7rem .7rem 1.6rem;border-radius:3px;box-shadow:0 12px 26px rgba(60,40,10,.4);transform:rotate(-4deg);max-width:300px;justify-self:center}
+    .o-polaroid img{display:block;width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:center 62%;filter:sepia(.25) contrast(1.02)}
+    .no-heritage .o-polaroid{display:none}
+    .no-heritage .o-family .container{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr)}
+    .o-tag{display:inline-block;background:linear-gradient(90deg,var(--maroon-d),var(--maroon));color:#fff;font-style:italic;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;padding:.35rem 1.4rem .35rem .8rem;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%)}
+    .o-family h2{font-size:clamp(2.2rem,5vw,3.4rem);line-height:.98;margin:.7rem 0 .5rem;color:var(--ink)}
+    .o-family h2::after{content:"";display:block;width:60px;height:3px;background:#C9A84C;margin-top:.7rem}
+    .o-family p{font-size:.98rem;color:#3b3226;max-width:46ch}
+    .o-facts{list-style:none;margin:0;padding:0 0 0 clamp(1rem,2.5vw,2rem);border-left:1px solid rgba(60,45,20,.3);display:grid;gap:1rem}
+    .o-facts li{display:flex;gap:.9rem;align-items:center;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:#2a2018;padding-bottom:1rem;border-bottom:1px solid rgba(60,45,20,.22)}
+    .o-facts li:last-child{border:0;padding-bottom:0}
+    .o-facts svg{width:46px;height:46px;flex:none;color:var(--maroon)}
+    /* GOOGLE BANNER */
+    .o-gwrap{padding:0 0 clamp(20px,3vw,30px);position:relative}
+    .o-google{position:relative;display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:center;background:radial-gradient(80% 140% at 85% 50%,#3a2a24,#0e1118 65%);border:2px solid var(--gold);border-radius:14px;padding:1.2rem 1.6rem;color:#fff;box-shadow:0 10px 26px rgba(60,40,10,.4);overflow:hidden}
+    .o-gplaque{width:clamp(84px,14vw,130px);aspect-ratio:1;border-radius:14px;background:linear-gradient(145deg,#6b6f75,#2b2e33);border:2px solid #9aa0a6;display:grid;place-items:center;transform:rotate(-5deg);box-shadow:0 8px 18px rgba(0,0,0,.55)}
+    .o-gplaque svg{width:62%}
+    .o-google .kick{color:var(--gold);font-weight:700;letter-spacing:.18em;font-size:.78rem;text-transform:uppercase}
+    .o-google h2{font-size:clamp(1.6rem,4.4vw,2.6rem);margin:.15rem 0 .2rem;color:#fff;line-height:1}
+    .o-google p{margin:0 0 .9rem;color:#e7e1d4}
+    .o-google .o-star{position:absolute;right:-30px;bottom:-40px;width:200px;color:rgba(201,168,76,.12)}
+    /* VISIT */
+    .o-visit{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1.4rem;align-items:center;background:rgba(255,255,255,.5);border:1px solid rgba(60,45,20,.18);border-radius:14px;padding:1rem 1.2rem;margin-bottom:clamp(26px,4vw,40px)}
+    .o-addr{display:flex;gap:.8rem;align-items:center}
+    .o-addr svg{width:30px;height:30px;color:#B8923a;flex:none}
+    .o-addr small{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#B8923a;font-weight:700}
+    .o-addr strong{font-family:var(--font-heading);font-size:1.45rem;line-height:1.1;color:var(--ink)}
+    .o-contact{border-left:1px solid rgba(60,45,20,.25);padding-left:1.4rem;display:grid;gap:.5rem}
+    .o-contact a,.o-contact div{display:flex;gap:.6rem;align-items:center;color:var(--ink);font-weight:600;text-decoration:none}
+    .o-contact svg{width:22px;height:22px;color:#B8923a;flex:none}
+    .o-map{position:relative;min-height:96px;border-radius:10px;overflow:hidden;border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.2);background:
+      linear-gradient(120deg,transparent 45%,#fff 45% 47%,transparent 47%),linear-gradient(35deg,transparent 60%,#fff 60% 62%,transparent 62%),linear-gradient(90deg,transparent 30%,#f7f2e3 30% 32%,transparent 32%),linear-gradient(0deg,transparent 55%,#f7f2e3 55% 57%,transparent 57%),
+      radial-gradient(40% 50% at 90% 10%,#cfe3b4,transparent),#e6dcc3;display:flex;align-items:center;justify-content:space-between;padding:.6rem .9rem;text-decoration:none}
+    .o-pin{width:38px;height:46px;color:var(--maroon);filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+    .o-map .btn2{background:#10151d;color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:.55rem .8rem;border-radius:6px;border:1px solid var(--gold);line-height:1.15}
+    /* footer tweaks */
+    .site-footer{border-top:3px solid var(--gold)}
+    .footer-bottom{}
+    /* RESPONSIVE */
+    @media (max-width:860px){
+      .o-hero-photo{width:100%;inset:0;-webkit-mask-image:linear-gradient(180deg,#000 0,transparent 70%);mask-image:linear-gradient(180deg,#000 0,transparent 70%);opacity:.55}
+      .o-trust{grid-template-columns:1fr 1fr;row-gap:1.2rem}
+      .o-trust li:nth-child(3){border-left:0}
+      .o-cards{grid-template-columns:1fr}
+      .o-steps{grid-template-columns:1fr;gap:1.4rem}
+      .o-chev{transform:rotate(90deg);justify-self:center}
+      .o-family .container,.no-heritage .o-family .container{grid-template-columns:1fr}
+      .o-facts{border-left:0;padding-left:0;border-top:1px solid rgba(60,45,20,.3);padding-top:1.2rem}
+      .o-visit{grid-template-columns:1fr}
+      .o-contact{border-left:0;padding-left:0}
+      .o-map{min-height:84px}
+    }
+    @media (max-width:480px){
+      .o-follow{flex-direction:column;align-items:flex-start}
+      .o-follow .lbl{border-left:0;padding-left:0}
+      .o-card{grid-template-columns:34% 1fr;padding-right:1rem}
+      .o-google{grid-template-columns:1fr;text-align:left}
+      .o-gplaque{width:84px}
+    }
   </style>
+
 
   <!-- GA4 placeholder — swap before launch -->
   <!-- JSON-LD Structured Data -->
@@ -67,7 +194,7 @@
     "url": "https://kubinautomotive.com",
     "logo": "https://kubinautomotive.com/images/kubin-logo.png",
     "image": "https://kubinautomotive.com/images/engine-block-workbench.jpg",
-    "description": "Family-owned auto repair shop in Bryan, TX serving the Brazos Valley since 1978. Three generations of honest, no-upsell automotive service.",
+    "description": "Family-owned auto repair shop in Bryan, TX serving the Brazos Valley since 1978. Honest, no-upsell automotive service.",
     "telephone": "+1-979-779-7484",
     "email": "Kubin.Automotive@yahoo.com",
     "address": {
@@ -188,49 +315,172 @@
   </div>
 
   <main id="main-content">
-    <section class="page-hero" aria-labelledby="offer-page-heading">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#962fbf"/></linearGradient>
+        <symbol id="i-tx" viewBox="0 0 100 100"><path d="M28 3H52V22H72L75 32L82 40V56L71 67L63 82L50 97L44 85L36 71L25 65L15 51L8 41L3 35L16 31L28 29Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M50 40l3.6 7.4 8.1 1.1-5.9 5.7 1.4 8.1-7.2-3.9-7.2 3.9 1.4-8.1-5.9-5.7 8.1-1.1z" fill="currentColor"/></symbol>
+        <symbol id="i-ig" viewBox="0 0 48 48"><rect x="5" y="5" width="38" height="38" rx="11" fill="none" stroke="url(#igg)" stroke-width="4.5"/><circle cx="24" cy="24" r="9" fill="none" stroke="url(#igg)" stroke-width="4.5"/><circle cx="35" cy="13" r="2.6" fill="#d62976"/></symbol>
+        <symbol id="i-fb" viewBox="0 0 48 48"><path d="M27 44V26h6l1-7h-7v-4.4c0-2 .7-3.4 3.5-3.4H34V5.3C33.4 5.2 31.300 5 29 5c-5.300 0-8.800 3.200-8.800 9.100V19h-6v7h6v18z" fill="#fff"/></symbol>
+        <symbol id="i-cal" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="33" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 19h36M15 5v8M33 5v8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g fill="currentColor"><circle cx="15" cy="27" r="2"/><circle cx="24" cy="27" r="2"/><circle cx="33" cy="27" r="2"/><circle cx="15" cy="35" r="2"/><circle cx="24" cy="35" r="2"/></g></symbol>
+        <symbol id="i-gear" viewBox="0 0 48 48"><path d="M24 15a9 9 0 100 18 9 9 0 000-18zm0 5a4 4 0 110 8 4 4 0 010-8zM20 3h8l1 5 4 2 4.500-3 5.500 5.500-3 4.500 2 4 5 1v8l-5 1-2 4 3 4.500-5.500 5.500-4.500-3-4 2-1 5h-8l-1-5-4-2-4.500 3L4.500 38.500l3-4.500-2-4-5-1v-8l5-1 2-4-3-4.500L9.500 6.500 14 9.500l4-2z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" transform="scale(.92) translate(2 2)"/></symbol>
+        <symbol id="i-people" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="15" r="5.500"/><circle cx="10" cy="19" r="4"/><circle cx="38" cy="19" r="4"/><path d="M13 40c0-7 5-12 11-12s11 5 11 12M2 36c0-5 3.500-8.500 8-8.500M46 36c0-5-3.500-8.500-8-8.500"/></g></symbol>
+        <symbol id="i-wrench" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M31 6a9 9 0 00-8 12L6 35l7 7 17-17a9 9 0 0012-8l-6 6-6-2-2-6z"/><path d="M33 41l8-8M38 38l4 4"/></g></symbol>
+        <symbol id="i-phone" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="6" width="30" height="52" rx="6"/><path d="M25 32l5 5 9-10"/><path d="M52 18l4-3M54 28h5M52 38l4 3"/></g></symbol>
+        <symbol id="i-follow" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="30" height="52" rx="6"/><rect x="19" y="14" width="12" height="12" rx="4"/><circle cx="25" cy="20" r="2.600"/></g><rect x="36" y="26" width="20" height="20" rx="5" fill="#2f6bd8" stroke="#E8C66A" stroke-width="2"/><path d="M48 46V37h3l.5-3.500H48v-2c0-1 .5-1.700 1.800-1.700h1.700V26.700c-.3 0-1.300-.2-2.500-.2-2.600 0-4.200 1.500-4.200 4.300v2.700H42V37h2.800v9z" fill="#fff"/></symbol>
+        <symbol id="i-oil" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22h4l4-6h14l4 6h6l16-10 2 4-14 12v16a4 4 0 01-4 4H14a4 4 0 01-4-4V32H6z"/><path d="M58 30c3 4 4 6 4 8a4 4 0 01-8 0c0-2 1-4 4-8z"/></g></symbol>
+        <symbol id="i-pin" viewBox="0 0 40 48"><path d="M20 2C10.600 2 4 8.800 4 17.200 4 29 20 46 20 46s16-17 16-28.800C36 8.800 29.400 2 20 2z" fill="currentColor"/><circle cx="20" cy="17" r="7" fill="#fff"/></symbol>
+        <symbol id="i-phoneh" viewBox="0 0 24 24"><path d="M22 16.920v3a2 2 0 01-2.180 2 19.790 19.790 0 01-8.630-3.070A19.500 19.500 0 014.690 12 19.790 19.790 0 011.610 3.280 2 2 0 013.600 1h3a2 2 0 012 1.720c.127.960.361 1.903.700 2.810a2 2 0 01-.450 2.110L7.910 8.600a16 16 0 006 6l.960-.960a2 2 0 012.110-.450c.907.339 1.850.573 2.810.700A2 2 0 0121.720 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+        <symbol id="i-g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.500c3.540 0 6.710 1.220 9.210 3.600l6.850-6.850C35.900 2.380 30.470 0 24 0 14.620 0 6.510 5.380 2.560 13.220l7.980 6.190C12.430 13.720 17.740 9.500 24 9.500z"/><path fill="#4285F4" d="M46.980 24.550c0-1.570-.15-3.090-.38-4.550H24v9.020h12.940c-.58 2.960-2.260 5.480-4.780 7.180l7.730 6c4.510-4.180 7.090-10.360 7.090-17.650z"/><path fill="#FBBC05" d="M10.530 28.590c-.48-1.450-.76-2.990-.76-4.590s.27-3.140.76-4.590l-7.980-6.190C.92 16.460 0 20.120 0 24c0 3.880.92 7.540 2.560 10.780l7.970-6.190z"/><path fill="#34A853" d="M24 48c6.480 0 11.930-2.130 15.890-5.810l-7.730-6c-2.150 1.450-4.920 2.300-8.160 2.300-6.260 0-11.570-4.220-13.470-9.910l-7.980 6.190C6.510 42.620 14.620 48 24 48z"/></symbol>
+        <symbol id="i-chev" viewBox="0 0 22 34"><path d="M4 3l14 14L4 31" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      </defs>
+    </svg>
+
+    <!-- ===== HERO ===== -->
+    <section class="o-hero" aria-labelledby="offer-page-heading">
+      <div class="o-hero-photo" role="img" aria-label="The Kubin Automotive Service sign at 3515 S College Ave, Bryan"></div>
       <div class="container">
-        <span class="section-label">Counter Offer</span>
-        <h1 id="offer-page-heading">Follow Us. Save on Your Visit.</h1>
-        <p>Family owned on S College Ave in Bryan since 1978.</p>
-        <div class="page-hero-rule" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="offer-headline">
-      <div class="container offer-wrap">
+        <span id="claim-aggie"></span>
+        <span class="o-ribbon">Family Owned Since 1978</span>
         <noscript><p>Please ask at the counter about our current offer, or call (979) 779-7484.</p></noscript>
+        <h1 class="o-head o-h1" id="offer-page-heading">Follow us.<span>Save on your visit.</span></h1>
+        <div class="o-brush" aria-hidden="true"></div>
+        <p class="o-sub">Family owned on S College Ave in Bryan since 1978.</p>
 
-        <div class="offer-card" id="offer-live">
-          <div class="eyebrow">Follow us for exclusive offers</div>
-          <h2 id="offer-headline"></h2>
-          <p id="offer-detail"></p>
-          <span class="offer-valid" id="offer-valid"></span>
-          <div class="offer-follow">
-            <a id="link-instagram" class="btn btn--gold" target="_blank" rel="noopener">Follow on Instagram</a>
-            <a id="link-facebook" class="btn btn--gold" target="_blank" rel="noopener">Follow on Facebook</a>
+        <div class="o-offer-row offer-live-only">
+          <div>
+            <div class="o-ticket" role="group" aria-label="Current offer">
+              <span class="amt" data-offer="amount"></span>
+              <span class="item" data-offer="item"></span>
+            </div>
+            <span class="o-valid" data-offer="valid"></span>
           </div>
-          <ul class="offer-fine" id="offer-fineprint"></ul>
+          <div class="o-follow">
+            <div>
+              <div class="lbl">Follow us<br>on social</div>
+              <div class="o-ico-row">
+                <a class="o-ico" data-link="instagram" target="_blank" rel="noopener" aria-label="Follow us on Instagram"><svg><use href="#i-ig"/></svg></a>
+                <a class="o-ico" data-link="facebook" target="_blank" rel="noopener" aria-label="Follow us on Facebook"><svg style="background:#1877F2;border-radius:6px;padding:2px"><use href="#i-fb"/></svg></a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="offer-card" id="offer-ended" hidden>
-          <div class="eyebrow">Thanks for stopping by</div>
+        <div class="o-ended" id="offer-ended" hidden>
           <h2>This offer has ended</h2>
-          <p>Ask at the counter about what we are running now, or call (979) 779-7484.</p>
+          <p>Thanks for stopping by. Ask at the counter about what we are running now, or call (979) 779-7484.</p>
         </div>
 
-        <div class="review-box">
-          <h2>Enjoyed your visit? Leave us a Google review</h2>
-          <p>Your honest feedback helps neighbors find a shop they can trust.</p>
-          <div class="link-row">
-            <a id="link-google" class="btn btn--gold" target="_blank" rel="noopener">Review us on Google</a>
-            <a id="link-yelp" class="btn" style="border:2px solid var(--navy);color:var(--navy)" target="_blank" rel="noopener">Find us on Yelp</a>
-          </div>
-          <p class="review-note">Reviews are optional and are never required for, or rewarded with, any offer.</p>
-        </div>
+        <ul class="o-trust">
+          <li><svg aria-hidden="true"><use href="#i-tx"/></svg><span>Local &amp;<br>family owned</span></li>
+          <li><svg aria-hidden="true"><use href="#i-cal"/></svg><span>Serving Bryan<br>since 1978</span></li>
+          <li><svg aria-hidden="true"><use href="#i-gear"/></svg><span>Honest,<br>reliable service</span></li>
+          <li><svg aria-hidden="true"><use href="#i-people"/></svg><span>Walk-ins<br>welcome</span></li>
+        </ul>
       </div>
     </section>
+
+    <div class="o-divide" aria-hidden="true"><svg class="o-badge"><use href="#i-tx"/></svg></div>
+
+    <!-- ===== PARCHMENT: PLATFORM ===== -->
+    <div class="o-parch">
+      <svg class="o-wrench" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-wrench"/></svg>
+      <section class="o-platform offer-live-only" aria-labelledby="platform-h">
+        <div class="container">
+          <h2 class="o-serif" id="platform-h">Choose your platform</h2>
+          <p class="kick">Follow us for exclusive offers, updates, and shop news.</p>
+          <div class="o-rule" aria-hidden="true"></div>
+          <div class="o-cards">
+            <article class="o-card">
+              <div class="o-phone ig" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-ig"/></svg></div>
+              <div>
+                <div class="kick">Follow us on</div>
+                <h3 class="o-serif">Instagram</h3>
+                <p>Get shop updates, special offers, behind-the-scenes looks, and local news from our team.</p>
+                <a class="o-btn" data-link="instagram" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" fill="none" stroke="#1B1410" stroke-width="5"><rect x="5" y="5" width="38" height="38" rx="11"/><circle cx="24" cy="24" r="9"/></svg>Follow on Instagram</a>
+              </div>
+            </article>
+            <article class="o-card">
+              <div class="o-phone fb" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-fb"/></svg></div>
+              <div>
+                <div class="kick">Follow us on</div>
+                <h3 class="o-serif">Facebook</h3>
+                <p>Stay in the loop with service reminders, exclusive promotions, and community updates.</p>
+                <a class="o-btn" data-link="facebook" target="_blank" rel="noopener"><svg viewBox="0 0 48 48"><path d="M27 44V26h6l1-7h-7v-4.400c0-2 .7-3.400 3.500-3.400H34V5.300C33.400 5.200 31.300 5 29 5c-5.300 0-8.800 3.200-8.800 9.100V19h-6v7h6v18z" fill="#1B1410"/></svg>Follow on Facebook</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== REDEEM ===== -->
+    <section class="o-redeem offer-live-only" aria-labelledby="redeem-h">
+      <div class="container">
+        <div class="o-redeem-title"><span class="o-head" id="redeem-h" style="line-height:1">How to redeem your offer</span></div>
+        <div class="o-steps">
+          <div class="o-step"><span class="n">1</span><svg class="ic" aria-hidden="true"><use href="#i-follow"/></svg><h3>Follow us on social</h3><p>Choose Instagram or Facebook above and hit Follow.</p></div>
+          <svg class="o-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+          <div class="o-step"><span class="n">2</span><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><h3>Show this page</h3><p>At the counter when you check in for your oil change.</p></div>
+          <svg class="o-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+          <div class="o-step"><span class="n">3</span><svg class="ic" aria-hidden="true"><use href="#i-oil"/></svg><h3 class="gold" data-offer="savings"></h3><p data-offer="savingsDetail"></p></div>
+        </div>
+        <ul class="o-fine" id="offer-fineprint" aria-label="Offer details"></ul>
+      </div>
+    </section>
+
+    <!-- ===== FAMILY + GOOGLE + VISIT (parchment) ===== -->
+    <div class="o-parch">
+      <section class="o-family" aria-labelledby="family-h">
+        <div class="container">
+          <figure class="o-polaroid" data-show="heritagePhoto" style="margin:0">
+            <img src="/images/kolton-photos/kubin-auto-business-open.jpg" alt="Kubin Automotive Service featured in The Eagle's Business &amp; Industrial Review, July 4, 1978" width="750" height="1065" loading="lazy">
+          </figure>
+          <div>
+            <span class="o-tag">A Bryan tradition</span>
+            <h2 class="o-serif" id="family-h">Family-owned<br>since 1978</h2>
+            <p>Since 1978, Kubin Automotive has been serving Bryan, College Station, and the Brazos Valley with honest, reliable auto repair. We are a local, family-owned shop built on trust, quality work, and a commitment to our community.</p>
+          </div>
+          <ul class="o-facts">
+            <li id="claim-gens" hidden></li>
+            <li><svg aria-hidden="true"><use href="#i-wrench"/></svg>Honest,<br>no-upsell service</li>
+            <li><svg aria-hidden="true"><use href="#i-tx"/></svg>Serving Bryan, College Station &amp; the Brazos Valley</li>
+            <li><svg aria-hidden="true"><use href="#i-cal"/></svg>Family owned<br>since 1978</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="o-gwrap" aria-labelledby="g-h">
+        <div class="container">
+          <div class="o-google">
+            <div class="o-gplaque" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-g"/></svg></div>
+            <div>
+              <div class="kick">Happy with your visit?</div>
+              <h2 class="o-serif" id="g-h">Leave us a Google review</h2>
+              <p>Your feedback helps neighbors find a shop they can trust!</p>
+              <a class="o-btn" data-link="google" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1B1410"><path d="M12 2l3 6.500 7 .8-5.200 4.800 1.500 7L12 17.500 5.700 21l1.500-7L2 9.300l7-.8z"/></svg>Review us on Google</a>
+            </div>
+            <svg class="o-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-tx"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" aria-label="Visit us">
+        <div class="o-visit">
+          <div class="o-addr"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Visit us at</small><strong>3515 S College Ave<br>Bryan, TX 77801</strong></div></div>
+          <div class="o-contact">
+            <a href="tel:+19797797484"><svg aria-hidden="true"><use href="#i-phoneh"/></svg>(979) 779-7484</a>
+            <div><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon-Fri: 7:30am – 5:30pm</div>
+          </div>
+          <a class="o-map" href="https://maps.google.com/?q=3515+S+College+Ave+Bryan+TX+77801" target="_blank" rel="noopener" aria-label="Find Kubin Automotive on the map">
+            <svg class="o-pin" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span class="btn2">Find us<br>on the map ›</span>
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
+
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer" role="contentinfo">
@@ -241,7 +491,7 @@
             <img src="/images/kubin-logo.png" alt="Kubin Automotive Service" width="168" height="168">
             <span class="logo-tagline">Since 1978</span>
           </a>
-          <p>Family-owned since 1978. Three generations strong. Serving Bryan, College Station, and the Brazos Valley with honest, no-upsell auto repair.</p>
+          <p>Family-owned since 1978. Serving Bryan, College Station, and the Brazos Valley with honest, no-upsell auto repair.</p>
         </div>
 
         <div class="footer-col">
@@ -279,7 +529,7 @@
 
       <div class="footer-bottom">
         <span>&copy; 2026 Kubin Automotive Service. All rights reserved.</span>
-        <span>Designed by <a href="https://aeopic.com" target="_blank" rel="noopener">Aeopic</a> &bull; <span aria-label="Site version">v4.3.3</span></span>
+        <span>Designed by <a href="https://aeopic.com" target="_blank" rel="noopener">Aeopic</a> &bull; <span aria-label="Site version">v4.6.0</span></span>
       </div>
     </div>
   </footer>

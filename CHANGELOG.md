@@ -1,3 +1,7 @@
+## v4.6.1 (branch offer-page): /offer rebuilt to golden mocks
+- Hero/ticket/platform cards/3-step redeem/family/Google banner/visit row; real Kolton photos only; offer still edited only in js/offer-config.js.
+- Held claims (Aggie Owned, Three generations) off by default via config.show; sitewide header 'Aggie Owned' tab hidden on /offer only; Yelp removed.
+
 ## v4.5.3 (2026-10-21) - Remove unverified testimonials, tire references and dead tracking
 - Reviews page: removed the 4 unattributed "Google Review" testimonials, the star blocks, the "Real customers" photo banner and the "Join thousands of drivers" line. The page now carries only a link to read reviews on Google (add real, attributed reviews only after Kolton confirms them). Meta/OG descriptions no longer claim "real reviews".
 - Chatbot knowledge base: removed the "trusted-by-bryan-college-station" entry (contained a customer testimonial and a "$2,000" savings claim) and neutralised the "reviews" answer.
